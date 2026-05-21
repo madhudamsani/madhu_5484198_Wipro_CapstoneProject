@@ -243,15 +243,5 @@ Saved screenshot files are stored in:
 screenshots/
 ```
 
-## Notes And Limitations
-
-- The automation depends on the live 99acres website, so DOM changes, popups, anti-bot behavior, or network issues can affect stability.
-- The end-to-end test requires manual OTP entry and pauses for 25 seconds.
-- `excel_reader.py` currently reads only one row from the Excel file, even though the workbook contains multiple data rows.
-- `requirements.txt` does not pin package versions.
-- The Allure CLI is not included by `allure-pytest`; install it separately if you want to generate/open HTML reports from the command line.
-- The project contains generated artifacts such as reports, screenshots, caches, and local IDE/environment files. These are useful for review but are not source logic.
-
-
 
 

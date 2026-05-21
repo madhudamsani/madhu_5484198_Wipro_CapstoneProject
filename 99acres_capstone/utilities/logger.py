@@ -62,18 +62,4 @@ class LogGen:
             file_handler
         )
 
-        # =========================
-        # CONSOLE HANDLER
-        # =========================
-
-        console_handler = logging.StreamHandler()
-
-        console_handler.setFormatter(
-            formatter
-        )
-
-        logger.addHandler(
-            console_handler
-        )
-
         return logger

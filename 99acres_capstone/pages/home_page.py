@@ -1,22 +1,13 @@
 from selenium.webdriver.common.by import By
+from selenium.common.exceptions import StaleElementReferenceException, TimeoutException
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from utilities.config_reader import get_implicit_wait
 
-from selenium.common.exceptions import (
-    StaleElementReferenceException,
-    TimeoutException
-)
+import allure
 
-from selenium.webdriver.support.ui import (
-    WebDriverWait
-)
-
-from selenium.webdriver.support import (
-    expected_conditions as EC
-)
-
-from utilities.config_reader import (
-    get_implicit_wait
-)
-
+from utilities.logger import LogGen
+logger = LogGen.loggen()
 
 class HomePage:
     """
@@ -97,7 +88,6 @@ class HomePage:
 
         Handles dynamic DOM refresh.
         """
-
         # Convert single locator to tuple
         if (
             isinstance(locators, tuple)
@@ -131,7 +121,6 @@ class HomePage:
     def click_when_ready(self, locators):
         """
         Reusable safe click method.
-
         Features:
         - Handles stale elements
         - Handles dynamic UI refresh
@@ -182,20 +171,15 @@ class HomePage:
     # =====================================================
 
     def click_buy_tab(self):
-        """
-        Click Buy tab.
-        """
-
+        #Click Buy tab.
         self.click_when_ready(
             self.buy_tab
         )
 
     def click_rent_tab(self):
         """
-        Click Rent tab using
-        primary or fallback locator.
+        Click Rent tab using primary or fallback locator.
         """
-
         self.click_when_ready(
             (
                 self.rent_tab,
@@ -205,9 +189,7 @@ class HomePage:
 
     def enter_location(self, location):
         """
-        Enter property location
-        in search field.
-
+        Enter property location in search field.
         Handles:
         - stale elements
         - dynamic DOM refresh
@@ -262,10 +244,7 @@ class HomePage:
         ) from last_error
 
     def click_search(self):
-        """
-        Click Search button using
-        primary or fallback locator.
-        """
+        #Click Search button using primary or fallback locator.
 
         self.click_when_ready(
             (
@@ -284,4 +263,22 @@ class HomePage:
 
         return (
             location_element.text.strip()
+        )
+
+    #screeshot method
+    def capture_screenshot(self, screenshot_name):
+
+        screenshot = (self.driver.get_screenshot_as_png())
+
+        allure.attach(
+            screenshot,
+            name=screenshot_name,
+            attachment_type=
+            allure.attachment_type.PNG
+        )
+
+        logger.info(
+            f"Screenshot Attached "
+            f"To Allure Report: "
+            f"{screenshot_name}"
         )

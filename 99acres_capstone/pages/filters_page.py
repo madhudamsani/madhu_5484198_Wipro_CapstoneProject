@@ -1,5 +1,3 @@
-import time
-
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -108,21 +106,6 @@ class FiltersPage:
     )
 
     # =====================================================
-    # APPLIED FILTERS
-    # =====================================================
-
-    applied_filters = (
-        By.XPATH,
-        "//*[contains(@class,'tag') "
-        "or contains(@class,'applied')]"
-    )
-
-    applied_filters_heading = (
-        By.XPATH,
-        "//*[normalize-space()='Applied Filters']"
-    )
-
-    # =====================================================
     # PROPERTY RESULTS
     # =====================================================
 
@@ -138,10 +121,9 @@ class FiltersPage:
         "a[href]"
     )
 
-    loading_placeholder = (
-        By.CSS_SELECTOR,
-        ".pageComponent.loadingPlaceholder, "
-        "[class*='loadingPlaceholder']"
+    #filtered properties count
+    filtered_results_count = (
+        By.XPATH, "//*[@id='app']/div/div/div[4]/div[3]/div[1]/div[1]/span"
     )
 
     # =====================================================
@@ -229,7 +211,7 @@ class FiltersPage:
 
         clicked = False
 
-        for _ in range(3):
+        for _ in range(2):
 
             clicked_this_round = (
                 self.click_visible_if_present(
@@ -305,17 +287,12 @@ class FiltersPage:
             self,
             locator,
             timeout=10,
-            max_scrolls=10
+            max_scrolls=5
     ):
 
         self.driver.implicitly_wait(0)
 
         try:
-
-            deadline = (
-                time.time()
-                + timeout
-            )
 
             for _ in range(max_scrolls):
 
@@ -351,14 +328,26 @@ class FiltersPage:
 
                     return visible_elements[0]
 
-                if time.time() >= deadline:
-                    break
-
                 self.driver.execute_script(
                     "window.scrollBy(0, Math.floor(window.innerHeight * 0.55));"
                 )
 
-                time.sleep(0.4)
+                try:
+
+                    WebDriverWait(
+                        self.driver,
+                        2
+                    ).until(
+                        lambda driver:
+                        len(
+                            self.driver.find_elements(
+                                *locator
+                            )
+                        ) > 0
+                    )
+
+                except TimeoutException:
+                    pass
 
             return WebDriverWait(
                 self.driver,
@@ -380,7 +369,7 @@ class FiltersPage:
             locator,
             filter_name,
             retries=3,
-            max_scrolls=10
+            max_scrolls=5
     ):
 
         for _ in range(retries):
@@ -481,7 +470,7 @@ class FiltersPage:
         return self.click_filter_until_applied(
             self.bhk_2_filter,
             "2 BHK",
-            max_scrolls=4
+            max_scrolls=2
         )
 
     def apply_flat_apartment_filter(self):
@@ -489,7 +478,7 @@ class FiltersPage:
         return self.click_filter_until_applied(
             self.flat_apartment_filter,
             "Flat/Apartment",
-            max_scrolls=8
+            max_scrolls=4
         )
 
     def apply_owner_filter(self):
@@ -497,7 +486,7 @@ class FiltersPage:
         return self.click_filter_until_applied(
             self.owner_filter,
             "Owner",
-            max_scrolls=4
+            max_scrolls=2
         )
 
     def apply_single_men_filter(self):
@@ -505,7 +494,7 @@ class FiltersPage:
         return self.click_filter_until_applied(
             self.single_men_filter,
             "Single Men",
-            max_scrolls=10
+            max_scrolls=5
         )
 
     def sort_price_low_to_high(self):
@@ -552,7 +541,20 @@ class FiltersPage:
             Keys.HOME
         ).perform()
 
-        time.sleep(0.5)
+        try:
+
+            WebDriverWait(
+                self.driver,
+                3
+            ).until(
+                lambda driver:
+                driver.execute_script(
+                    "return window.pageYOffset"
+                ) == 0
+            )
+
+        except TimeoutException:
+            pass
 
     # =====================================================
     # RESULTS VALIDATIONS
@@ -560,21 +562,45 @@ class FiltersPage:
 
     def verify_filtered_results(self):
 
-        results = self.wait.until(
+        self.wait.until(
             EC.visibility_of_any_elements_located(
                 self.property_cards
             )
         )
 
-        return len(results) > 0
+        return True
 
     def get_results_count(self):
 
-        results = (
-            self.get_visible_property_cards()
-        )
+        try:
 
-        return len(results)
+            count_element = self.wait.until(
+                EC.visibility_of_element_located(
+                    self.filtered_results_count
+                )
+            )
+
+            count_text = (
+                count_element.text.strip()
+            )
+
+            count_number = (
+                ''.join(
+                    filter(
+                        str.isdigit,
+                        count_text
+                    )
+                )
+            )
+
+            return int(count_number)
+
+        except (
+                TimeoutException,
+                ValueError
+        ):
+
+            return 0
 
     # =====================================================
     # PROPERTY SELECTION

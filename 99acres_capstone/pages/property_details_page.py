@@ -1,15 +1,22 @@
-import re
-
 from selenium.common.exceptions import (
     StaleElementReferenceException,
     TimeoutException,
     WebDriverException
 )
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait
 
-from utilities.config_reader import get_implicit_wait
+from selenium.webdriver.common.by import By
+
+from selenium.webdriver.support import (
+    expected_conditions as EC
+)
+
+from selenium.webdriver.support.ui import (
+    WebDriverWait
+)
+
+from utilities.config_reader import (
+    get_implicit_wait
+)
 
 
 class PropertyDetailsPage:
@@ -18,7 +25,10 @@ class PropertyDetailsPage:
 
         self.driver = driver
 
-        self.wait = WebDriverWait(driver, 40)
+        self.wait = WebDriverWait(
+            driver,
+            40
+        )
 
     # =========================
     # POPUPS
@@ -35,7 +45,8 @@ class PropertyDetailsPage:
         By.XPATH,
         "//*["
         "(self::button or self::div or self::span)"
-        " and (normalize-space()='Okay' or normalize-space()='OK')"
+        " and (normalize-space()='Okay' "
+        "or normalize-space()='OK')"
         "] | //button["
         "contains("
         "translate(normalize-space(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),"
@@ -48,6 +59,11 @@ class PropertyDetailsPage:
     # =========================
     # LOCATORS
     # =========================
+
+    rent_amount = (
+        By.ID,
+        "pdPrice"
+    )
 
     shortlist_button = (
         By.ID,
@@ -65,7 +81,6 @@ class PropertyDetailsPage:
     view_phone_button = (
         By.XPATH,
         "//*[@id='OwnerDetails']/div/input"
-
     )
 
     contact_section = (
@@ -106,11 +121,16 @@ class PropertyDetailsPage:
     # COMMON METHODS
     # =========================
 
-    def click_visible_if_present(self, locator, timeout=3):
+    def click_visible_if_present(
+            self,
+            locator,
+            timeout=3
+    ):
 
         self.driver.implicitly_wait(0)
 
         try:
+
             elements = WebDriverWait(
                 self.driver,
                 timeout
@@ -149,28 +169,18 @@ class PropertyDetailsPage:
             )
 
             try:
+
                 visible_element.click()
 
             except WebDriverException:
+
                 self.driver.execute_script(
                     "arguments[0].click();",
                     visible_element
                 )
 
-                self.driver.execute_script(
-                    """
-                    arguments[0].dispatchEvent(
-                        new MouseEvent('click', {
-                            bubbles: true,
-                            cancelable: true,
-                            view: window
-                        })
-                    );
-                    """,
-                    visible_element
-                )
-
             try:
+
                 WebDriverWait(
                     self.driver,
                     2
@@ -185,10 +195,15 @@ class PropertyDetailsPage:
 
             return True
 
-        except (StaleElementReferenceException, TimeoutException):
+        except (
+            StaleElementReferenceException,
+            TimeoutException
+        ):
+
             return False
 
         finally:
+
             self.driver.implicitly_wait(
                 get_implicit_wait()
             )
@@ -198,6 +213,7 @@ class PropertyDetailsPage:
         clicked = False
 
         for _ in range(3):
+
             clicked_this_round = (
                 self.click_visible_if_present(
                     self.ok_understood_button
@@ -207,18 +223,27 @@ class PropertyDetailsPage:
                 )
             )
 
-            clicked = clicked or clicked_this_round
+            clicked = (
+                clicked
+                or clicked_this_round
+            )
 
             if not clicked_this_round:
                 break
 
         return clicked
 
-    def find_visible_element(self, locator, max_scrolls=8, timeout=10):
+    def find_visible_element(
+            self,
+            locator,
+            max_scrolls=8,
+            timeout=10
+    ):
 
         self.driver.implicitly_wait(0)
 
         try:
+
             for _ in range(max_scrolls):
 
                 elements = self.driver.find_elements(
@@ -226,11 +251,17 @@ class PropertyDetailsPage:
                 )
 
                 for element in elements:
+
                     try:
+
                         if element.is_displayed():
+
                             return element
 
-                    except StaleElementReferenceException:
+                    except (
+                        StaleElementReferenceException,
+                        WebDriverException
+                    ):
                         continue
 
                 self.driver.execute_script(
@@ -247,11 +278,15 @@ class PropertyDetailsPage:
             )
 
         finally:
+
             self.driver.implicitly_wait(
                 get_implicit_wait()
             )
 
-    def scroll_to_and_click(self, element):
+    def scroll_to_and_click(
+            self,
+            element
+    ):
 
         self.driver.execute_script(
             """
@@ -262,12 +297,22 @@ class PropertyDetailsPage:
             element
         )
 
-        self.driver.execute_script(
-            "arguments[0].click();",
-            element
-        )
+        try:
 
-    def click_detail_page_element(self, locator, max_scrolls=8):
+            element.click()
+
+        except WebDriverException:
+
+            self.driver.execute_script(
+                "arguments[0].click();",
+                element
+            )
+
+    def click_detail_page_element(
+            self,
+            locator,
+            max_scrolls=8
+    ):
 
         self.handle_blocking_popups()
 
@@ -290,14 +335,17 @@ class PropertyDetailsPage:
 
     def switch_to_property_window(self):
 
-        all_windows = self.driver.window_handles
+        all_windows = (
+            self.driver.window_handles
+        )
 
         self.driver.switch_to.window(
             all_windows[-1]
         )
 
         self.wait.until(
-            lambda driver: driver.current_url
+            lambda driver:
+            driver.current_url
             and driver.current_url != "about:blank"
         )
 
@@ -314,14 +362,14 @@ class PropertyDetailsPage:
 
         return self.click_detail_page_element(
             self.owner_details_tab,
-            max_scrolls=6
+            max_scrolls=3
         )
 
     def click_view_phone_number(self):
 
         return self.click_detail_page_element(
             self.view_phone_button,
-            max_scrolls=3
+            max_scrolls=2
         )
 
     # =========================
@@ -330,7 +378,9 @@ class PropertyDetailsPage:
 
     def get_property_title(self):
 
-        for locator in self.property_title_locators:
+        for locator in (
+                self.property_title_locators
+        ):
 
             try:
 
@@ -353,34 +403,51 @@ class PropertyDetailsPage:
                                     and len(text) > 5
                                     and len(text) < 200
                             ):
+
                                 return text
 
-                    except Exception:
+                    except (
+                        StaleElementReferenceException,
+                        WebDriverException
+                    ):
                         continue
 
-            except Exception:
+            except (
+                StaleElementReferenceException,
+                WebDriverException
+            ):
                 continue
 
         return self.extract_title_from_body()
 
     def get_rent_amount(self):
 
-        body_text = self.driver.find_element(
-            By.TAG_NAME,
-            "body"
-        ).text
+        try:
 
-        match = re.search(
-            r"(?:₹|Rs\.?\s?)([\d,]+)",
-            body_text
-        )
+            rent_element = self.wait.until(
+                EC.visibility_of_element_located(
+                    self.rent_amount
+                )
+            )
 
-        if match:
-            return match.group(0)
+            rent_text = (
+                rent_element.text.strip()
+            )
 
-        raise TimeoutException(
-            "Rent amount was not found on the property details page"
-        )
+            if rent_text:
+
+                return rent_text
+
+            raise TimeoutException(
+                "Rent amount text is empty"
+            )
+
+        except TimeoutException:
+
+            raise TimeoutException(
+                "Rent amount was not found "
+                "on the property details page"
+            )
 
     def extract_title_from_body(self):
 
@@ -390,12 +457,19 @@ class PropertyDetailsPage:
         ).text
 
         for line in body_text.splitlines():
-            normalized_line = line.strip()
+
+            normalized_line = (
+                line.strip()
+            )
 
             if "for Rent" in normalized_line:
+
                 return normalized_line
 
-        return body_text.splitlines()[0].strip()
+        return (
+            body_text.splitlines()[0]
+            .strip()
+        )
 
     def verify_contact_section(self):
 

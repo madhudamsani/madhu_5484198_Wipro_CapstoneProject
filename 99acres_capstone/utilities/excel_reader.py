@@ -18,7 +18,7 @@ def get_test_data():
     sheet = workbook.active
 
     data = {
-        "mobile_number": sheet["A2"].value,
+        "mobile_number": sheet["A3"].value,
         "location": sheet["B2"].value
     }
 

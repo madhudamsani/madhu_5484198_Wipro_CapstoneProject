@@ -1,0 +1,10 @@
+[32mINFO    [0m root:conftest.py:43 Launching Chrome Browser
+[32mINFO    [0m root:conftest.py:68 Navigated To 99acres Website
+[32mINFO    [0m root:test_cases.py:42 Starting Search Flow
+[32mINFO    [0m root:test_cases.py:44 Clicking Rent Tab
+[32mINFO    [0m root:test_cases.py:46 Entering Location: Rent in Hyderabad
+[32mINFO    [0m root:test_cases.py:50 Clicking Search
+[32mINFO    [0m root:test_cases.py:57 Closing Result Page Popups
+[32mINFO    [0m root:test_cases.py:31 Screenshot Attached To Allure Report: 2bhk_filter
+[32mINFO    [0m root:conftest.py:73 Closing Browser
+[32mINFO    [0m root:conftest.py:77 Browser Closed Successfully
