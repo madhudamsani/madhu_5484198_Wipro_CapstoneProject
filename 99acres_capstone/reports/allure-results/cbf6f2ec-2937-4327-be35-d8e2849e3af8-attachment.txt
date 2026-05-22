@@ -1,0 +1,7 @@
+[32mINFO    [0m root:conftest.py:43 Launching Chrome Browser
+[32mINFO    [0m root:conftest.py:68 Navigated To 99acres Website
+[32mINFO    [0m root:test_cases.py:247 Initial URL: https://www.99acres.com/
+[32mINFO    [0m root:test_cases.py:252 Current URL: https://www.99acres.com/
+[32mINFO    [0m root:home_page.py:280 Screenshot Attached To Allure Report: empty_location_validation
+[32mINFO    [0m root:conftest.py:73 Closing Browser
+[32mINFO    [0m root:conftest.py:77 Browser Closed Successfully

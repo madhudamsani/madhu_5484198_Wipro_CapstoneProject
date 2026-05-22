@@ -1,0 +1,14 @@
+[32mINFO    [0m root:conftest.py:43 Launching Chrome Browser
+[32mINFO    [0m root:conftest.py:68 Navigated To 99acres Website
+[32mINFO    [0m root:test_cases.py:25 Starting Search Flow
+[32mINFO    [0m root:test_cases.py:27 Clicking Rent Tab
+[32mINFO    [0m root:test_cases.py:29 Entering Location: Rent in Hyderabad
+[32mINFO    [0m root:test_cases.py:33 Clicking Search
+[32mINFO    [0m root:test_cases.py:40 Closing Result Page Popups
+[32mINFO    [0m root:test_cases.py:141 Property Title: 4Bedrooms 3Baths
+Independent House/Villa for Rent
+in Jubilee Hills, Hyderabad
+[32mINFO    [0m root:test_cases.py:143 Rent Amount: 1.2 Lac
+[32mINFO    [0m root:home_page.py:280 Screenshot Attached To Allure Report: property_details_page
+[32mINFO    [0m root:conftest.py:73 Closing Browser
+[32mINFO    [0m root:conftest.py:77 Browser Closed Successfully

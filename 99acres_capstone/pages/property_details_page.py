@@ -56,6 +56,11 @@ class PropertyDetailsPage:
         "'agree')]"
     )
 
+    fraud_alert_close_button = (
+        By.XPATH,
+        "//*[@id='app']/div/div[5]/div/div[1]/i"
+    )
+
     # =========================
     # LOCATORS
     # =========================
@@ -480,3 +485,68 @@ class PropertyDetailsPage:
         )
 
         return element.is_displayed()
+
+    def is_login_popup_displayed(self):
+
+        body_text = self.driver.find_element(
+            By.TAG_NAME,
+            "body"
+        ).text.lower()
+
+        keywords = [
+            "login",
+            "register",
+            "mobile number",
+            "continue",
+            "verify"
+        ]
+
+        return any(keyword in body_text for keyword in keywords)
+
+    def close_fraud_alert_popup(self):
+
+        try:
+
+            close_button = WebDriverWait(
+                self.driver,
+                5
+            ).until(
+                EC.visibility_of_element_located(
+                    self.fraud_alert_close_button
+                )
+            )
+
+            self.driver.execute_script(
+                """
+                arguments[0].scrollIntoView({
+                    block: 'center'
+                });
+                """,
+                close_button
+            )
+
+            try:
+
+                close_button.click()
+
+            except WebDriverException:
+
+                self.driver.execute_script(
+                    "arguments[0].click();",
+                    close_button
+                )
+
+            WebDriverWait(
+                self.driver,
+                5
+            ).until(
+                EC.invisibility_of_element_located(
+                    self.fraud_alert_close_button
+                )
+            )
+
+            return True
+
+        except TimeoutException:
+
+            return False

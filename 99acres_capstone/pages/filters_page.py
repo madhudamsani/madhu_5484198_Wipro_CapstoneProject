@@ -1,7 +1,7 @@
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-
+import re
 from selenium.common.exceptions import (
     StaleElementReferenceException,
     TimeoutException,
@@ -62,6 +62,9 @@ class FiltersPage:
         "//*[not(ancestor::*[@data-label='SEARCH']) "
         "and normalize-space()='2 BHK']"
     )
+
+    #2bhk title
+    bhk2_title = (By.XPATH, "//*[@id='AI_LISTING']/div[2]/div[1]/div/div[2]/a/h2/span")
 
     # Flat / Apartment
     flat_apartment_filter = (
@@ -287,7 +290,7 @@ class FiltersPage:
             self,
             locator,
             timeout=10,
-            max_scrolls=5
+            max_scrolls=4
     ):
 
         self.driver.implicitly_wait(0)
@@ -682,3 +685,14 @@ class FiltersPage:
                 or "View Number" in page_text
             )
         )
+
+#     return bhk_text
+    def get_bhk_text(self):
+
+        full_title = self.driver.find_element(
+            *self.bhk2_title
+        ).text.strip()
+
+        match = re.search(r"\d+\s*BHK", full_title)
+
+        return match.group(0) if match else None

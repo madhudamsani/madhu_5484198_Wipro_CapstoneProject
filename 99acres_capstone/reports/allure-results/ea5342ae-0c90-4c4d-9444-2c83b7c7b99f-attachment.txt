@@ -1,0 +1,23 @@
+[32mINFO    [0m root:conftest.py:43 Launching Chrome Browser
+[32mINFO    [0m root:conftest.py:68 Navigated To 99acres Website
+[32mINFO    [0m root:test_end_to_end_flow.py:33 Hovering Profile Icon
+[32mINFO    [0m root:test_end_to_end_flow.py:35 Clicking Login/Register
+[32mINFO    [0m root:home_page.py:280 Screenshot Attached To Allure Report: login_popup
+[32mINFO    [0m root:test_end_to_end_flow.py:38 Entering Mobile Number
+[32mINFO    [0m root:test_end_to_end_flow.py:40 Clicking Continue
+[32mINFO    [0m root:test_end_to_end_flow.py:42 Waiting 20 seconds for manual OTP entry
+[32mINFO    [0m root:test_end_to_end_flow.py:44 Clicking Verify & Continue
+[32mINFO    [0m root:home_page.py:280 Screenshot Attached To Allure Report: login_screenshot
+[32mINFO    [0m root:test_end_to_end_flow.py:47 Login Successful
+[32mINFO    [0m root:test_end_to_end_flow.py:54 Clicking Rent Tab
+[32mINFO    [0m root:test_end_to_end_flow.py:56 Entering Location: Rent in Hyderabad
+[32mINFO    [0m root:home_page.py:280 Screenshot Attached To Allure Report: location_entered
+[32mINFO    [0m root:test_end_to_end_flow.py:59 Clicking Search Button
+[32mINFO    [0m root:home_page.py:280 Screenshot Attached To Allure Report: search_results_page
+[32mINFO    [0m root:test_end_to_end_flow.py:72 Results Heading: Property for Rent in Hyderabad
+[32mINFO    [0m root:test_end_to_end_flow.py:76 Initial Results Count: 10976
+[32mINFO    [0m root:test_end_to_end_flow.py:80 Handling Blocking Popups
+[32mINFO    [0m root:test_end_to_end_flow.py:85 Applying 2 BHK Filter
+[32mINFO    [0m root:test_end_to_end_flow.py:91 Applying Flat/Apartment Filter
+[32mINFO    [0m root:conftest.py:73 Closing Browser
+[32mINFO    [0m root:conftest.py:77 Browser Closed Successfully

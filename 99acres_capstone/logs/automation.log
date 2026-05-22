@@ -1,380 +1,133 @@
-2026-05-21 14:40:58 | INFO | conftest.py:43 | Launching Chrome Browser
-2026-05-21 14:41:02 | INFO | conftest.py:68 | Navigated To 99acres Website
-2026-05-21 14:41:02 | INFO | test_end_to_end_flow.py:29 | Hovering Profile Icon
-2026-05-21 14:41:02 | INFO | test_end_to_end_flow.py:33 | Clicking Login/Register
-2026-05-21 14:41:03 | INFO | test_end_to_end_flow.py:37 | Entering Mobile Number
-2026-05-21 14:41:04 | INFO | test_end_to_end_flow.py:41 | Clicking Continue
-2026-05-21 14:41:04 | INFO | test_end_to_end_flow.py:45 | Waiting 20 seconds for manual OTP entry
-2026-05-21 14:41:24 | INFO | test_end_to_end_flow.py:51 | Clicking Verify & Continue
-2026-05-21 14:41:25 | INFO | test_end_to_end_flow.py:55 | Login Successful
-2026-05-21 14:41:41 | INFO | test_end_to_end_flow.py:64 | Clicking Rent Tab
-2026-05-21 14:41:41 | INFO | test_end_to_end_flow.py:68 | Entering Location: Rent in Hyderabad
-2026-05-21 14:41:43 | INFO | test_end_to_end_flow.py:75 | Clicking Search Button
-2026-05-21 14:41:46 | INFO | test_end_to_end_flow.py:86 | Results Heading: Property for Rent in Hyderabad
-2026-05-21 14:41:59 | INFO | test_end_to_end_flow.py:93 | Initial Results Count: 10974
-2026-05-21 14:41:59 | INFO | test_end_to_end_flow.py:101 | Handling Blocking Popups
-2026-05-21 14:42:06 | INFO | test_end_to_end_flow.py:107 | Applying 2 BHK Filter
-2026-05-21 14:42:23 | INFO | test_end_to_end_flow.py:115 | Applying Flat/Apartment Filter
-2026-05-21 14:43:14 | INFO | test_end_to_end_flow.py:124 | Applying Owner Filter
-2026-05-21 14:43:31 | INFO | test_end_to_end_flow.py:133 | Applying Single Men Filter
-2026-05-21 14:43:48 | INFO | test_end_to_end_flow.py:142 | Applying Sort: Price Low To High
-2026-05-21 14:43:58 | INFO | test_end_to_end_flow.py:155 | Verifying Filtered Results
-2026-05-21 14:43:58 | INFO | test_end_to_end_flow.py:161 | Filtered Results Count: 1
-2026-05-21 14:43:58 | INFO | test_end_to_end_flow.py:168 | Selecting First Filtered Property
-2026-05-21 14:44:06 | INFO | test_end_to_end_flow.py:178 | Switching To Property Window
-2026-05-21 14:44:21 | INFO | test_end_to_end_flow.py:188 | Clicking Shortlist Button
-2026-05-21 14:44:42 | INFO | test_end_to_end_flow.py:197 | Opening Owner Details Section
-2026-05-21 14:45:03 | INFO | test_end_to_end_flow.py:206 | Clicking View Phone Number
-2026-05-21 14:45:17 | INFO | test_end_to_end_flow.py:213 | Verifying Contact Section
-2026-05-21 14:45:21 | INFO | test_end_to_end_flow.py:225 | Property Title: Rent
-2026-05-21 14:45:21 | INFO | test_end_to_end_flow.py:229 | Rent Amount: Rs7000
-2026-05-21 14:45:21 | INFO | test_end_to_end_flow.py:233 | End-to-End Property Flow Completed Successfully
-2026-05-21 14:45:21 | INFO | conftest.py:73 | Closing Browser
-2026-05-21 14:45:23 | INFO | conftest.py:77 | Browser Closed Successfully
+2026-05-22 08:39:54 | INFO | conftest.py:43 | Launching Chrome Browser
+2026-05-22 08:40:02 | INFO | conftest.py:68 | Navigated To 99acres Website
+2026-05-22 08:40:02 | INFO | test_cases.py:25 | Starting Search Flow
+2026-05-22 08:40:02 | INFO | test_cases.py:27 | Clicking Rent Tab
+2026-05-22 08:40:02 | INFO | test_cases.py:29 | Entering Location: Rent in Hyderabad
+2026-05-22 08:40:04 | INFO | test_cases.py:33 | Clicking Search
+2026-05-22 08:40:07 | INFO | test_cases.py:40 | Closing Result Page Popups
+2026-05-22 08:40:12 | INFO | test_cases.py:57 | Results Heading: Property for Rent in Hyderabad
+2026-05-22 08:40:12 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: valid_property_search
+2026-05-22 08:40:12 | INFO | conftest.py:73 | Closing Browser
+2026-05-22 08:40:15 | INFO | conftest.py:77 | Browser Closed Successfully
+2026-05-22 08:40:15 | INFO | conftest.py:43 | Launching Chrome Browser
+2026-05-22 08:40:19 | INFO | conftest.py:68 | Navigated To 99acres Website
+2026-05-22 08:40:19 | INFO | test_cases.py:25 | Starting Search Flow
+2026-05-22 08:40:19 | INFO | test_cases.py:27 | Clicking Rent Tab
+2026-05-22 08:40:19 | INFO | test_cases.py:29 | Entering Location: Rent in Hyderabad
+2026-05-22 08:40:21 | INFO | test_cases.py:33 | Clicking Search
+2026-05-22 08:40:23 | INFO | test_cases.py:40 | Closing Result Page Popups
+2026-05-22 08:40:38 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: 2bhk_filter
+2026-05-22 08:40:38 | INFO | conftest.py:73 | Closing Browser
+2026-05-22 08:40:40 | INFO | conftest.py:77 | Browser Closed Successfully
+2026-05-22 08:40:40 | INFO | conftest.py:43 | Launching Chrome Browser
+2026-05-22 08:40:43 | INFO | conftest.py:68 | Navigated To 99acres Website
+2026-05-22 08:40:43 | INFO | test_cases.py:25 | Starting Search Flow
+2026-05-22 08:40:43 | INFO | test_cases.py:27 | Clicking Rent Tab
+2026-05-22 08:40:43 | INFO | test_cases.py:29 | Entering Location: Rent in Hyderabad
+2026-05-22 08:40:45 | INFO | test_cases.py:33 | Clicking Search
+2026-05-22 08:40:50 | INFO | test_cases.py:40 | Closing Result Page Popups
+2026-05-22 08:40:55 | INFO | test_cases.py:98 | Getting Displayed Location
+2026-05-22 08:40:55 | INFO | test_cases.py:102 | Displayed Location: Hyderabad 
+2026-05-22 08:40:55 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: search_location_displayed
+2026-05-22 08:40:55 | INFO | conftest.py:73 | Closing Browser
+2026-05-22 08:40:58 | INFO | conftest.py:77 | Browser Closed Successfully
+2026-05-22 08:40:58 | INFO | conftest.py:43 | Launching Chrome Browser
+2026-05-22 08:41:02 | INFO | conftest.py:68 | Navigated To 99acres Website
+2026-05-22 08:41:02 | INFO | test_cases.py:25 | Starting Search Flow
+2026-05-22 08:41:02 | INFO | test_cases.py:27 | Clicking Rent Tab
+2026-05-22 08:41:02 | INFO | test_cases.py:29 | Entering Location: Rent in Hyderabad
+2026-05-22 08:41:03 | INFO | test_cases.py:33 | Clicking Search
+2026-05-22 08:41:08 | INFO | test_cases.py:40 | Closing Result Page Popups
+2026-05-22 08:41:37 | INFO | test_cases.py:141 | Property Title: 4Bedrooms 3Baths
+Independent House/Villa for Rent
+in Jubilee Hills, Hyderabad
+2026-05-22 08:41:37 | INFO | test_cases.py:143 | Rent Amount: 1.2 Lac
+2026-05-22 08:41:37 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: property_details_page
+2026-05-22 08:41:37 | INFO | conftest.py:73 | Closing Browser
+2026-05-22 08:41:40 | INFO | conftest.py:77 | Browser Closed Successfully
+2026-05-22 08:41:40 | INFO | conftest.py:43 | Launching Chrome Browser
+2026-05-22 08:41:44 | INFO | conftest.py:68 | Navigated To 99acres Website
+2026-05-22 08:41:44 | INFO | test_cases.py:25 | Starting Search Flow
+2026-05-22 08:41:44 | INFO | test_cases.py:27 | Clicking Rent Tab
+2026-05-22 08:41:44 | INFO | test_cases.py:29 | Entering Location: Rent in Hyderabad
+2026-05-22 08:41:46 | INFO | test_cases.py:33 | Clicking Search
+2026-05-22 08:41:50 | INFO | test_cases.py:40 | Closing Result Page Popups
+2026-05-22 08:42:04 | INFO | test_cases.py:174 | Applying Owner Filter
+2026-05-22 08:42:50 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: shortlist_login_popup
+2026-05-22 08:42:50 | INFO | conftest.py:73 | Closing Browser
+2026-05-22 08:42:52 | INFO | conftest.py:77 | Browser Closed Successfully
+2026-05-22 08:42:52 | INFO | conftest.py:43 | Launching Chrome Browser
+2026-05-22 08:42:56 | INFO | conftest.py:68 | Navigated To 99acres Website
+2026-05-22 08:42:56 | INFO | test_cases.py:247 | Initial URL: https://www.99acres.com/
+2026-05-22 08:42:56 | INFO | test_cases.py:252 | Current URL: https://www.99acres.com/
+2026-05-22 08:42:57 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: empty_location_validation
+2026-05-22 08:42:57 | INFO | conftest.py:73 | Closing Browser
+2026-05-22 08:42:59 | INFO | conftest.py:77 | Browser Closed Successfully
 
-2026-05-21 14:47:31 | INFO | conftest.py:43 | Launching Chrome Browser
-2026-05-21 14:47:35 | INFO | conftest.py:68 | Navigated To 99acres Website
-2026-05-21 14:47:35 | INFO | test_cases.py:42 | Starting Search Flow
-2026-05-21 14:47:35 | INFO | test_cases.py:44 | Clicking Rent Tab
-2026-05-21 14:47:35 | INFO | test_cases.py:46 | Entering Location: Rent in Hyderabad
-2026-05-21 14:47:37 | INFO | test_cases.py:50 | Clicking Search
-2026-05-21 14:47:41 | INFO | test_cases.py:57 | Closing Result Page Popups
-2026-05-21 14:47:46 | INFO | test_cases.py:74 | Results Heading: Property for Rent in Hyderabad
-2026-05-21 14:47:47 | INFO | test_cases.py:31 | Screenshot Attached To Allure Report: valid_property_search
-2026-05-21 14:47:47 | INFO | conftest.py:73 | Closing Browser
-2026-05-21 14:47:49 | INFO | conftest.py:77 | Browser Closed Successfully
-2026-05-21 14:47:49 | INFO | conftest.py:43 | Launching Chrome Browser
-2026-05-21 14:47:52 | INFO | conftest.py:68 | Navigated To 99acres Website
-2026-05-21 14:47:52 | INFO | test_cases.py:42 | Starting Search Flow
-2026-05-21 14:47:52 | INFO | test_cases.py:44 | Clicking Rent Tab
-2026-05-21 14:47:53 | INFO | test_cases.py:46 | Entering Location: Rent in Hyderabad
-2026-05-21 14:47:54 | INFO | test_cases.py:50 | Clicking Search
-2026-05-21 14:47:57 | INFO | test_cases.py:57 | Closing Result Page Popups
-2026-05-21 14:48:19 | INFO | test_cases.py:31 | Screenshot Attached To Allure Report: 2bhk_filter
-2026-05-21 14:48:19 | INFO | conftest.py:73 | Closing Browser
-2026-05-21 14:48:22 | INFO | conftest.py:77 | Browser Closed Successfully
-2026-05-21 14:48:22 | INFO | conftest.py:43 | Launching Chrome Browser
-2026-05-21 14:48:28 | INFO | conftest.py:68 | Navigated To 99acres Website
-2026-05-21 14:48:28 | INFO | test_cases.py:42 | Starting Search Flow
-2026-05-21 14:48:28 | INFO | test_cases.py:44 | Clicking Rent Tab
-2026-05-21 14:48:28 | INFO | test_cases.py:46 | Entering Location: Rent in Hyderabad
-2026-05-21 14:48:30 | INFO | test_cases.py:50 | Clicking Search
-2026-05-21 14:48:33 | INFO | test_cases.py:57 | Closing Result Page Popups
-2026-05-21 14:48:39 | INFO | test_cases.py:114 | Getting Displayed Location
-2026-05-21 14:48:39 | INFO | test_cases.py:118 | Displayed Location: Hyderabad 
-2026-05-21 14:48:39 | INFO | test_cases.py:31 | Screenshot Attached To Allure Report: search_location_displayed
-2026-05-21 14:48:39 | INFO | conftest.py:73 | Closing Browser
-2026-05-21 14:48:42 | INFO | conftest.py:77 | Browser Closed Successfully
-2026-05-21 14:48:42 | INFO | conftest.py:43 | Launching Chrome Browser
-2026-05-21 14:48:43 | INFO | conftest.py:68 | Navigated To 99acres Website
-2026-05-21 14:48:43 | INFO | test_cases.py:42 | Starting Search Flow
-2026-05-21 14:48:43 | INFO | test_cases.py:44 | Clicking Rent Tab
-2026-05-21 14:48:47 | INFO | test_cases.py:46 | Entering Location: Rent in Hyderabad
-2026-05-21 14:48:49 | INFO | test_cases.py:50 | Clicking Search
-2026-05-21 14:48:51 | INFO | test_cases.py:57 | Closing Result Page Popups
-2026-05-21 14:49:21 | INFO | test_cases.py:156 | Property Title: 3BHK 3Baths
-Flat/Apartment for Rent
-in SMR Vinay Symphony, Indira Nagar, Gachibowli
-2026-05-21 14:49:21 | INFO | test_cases.py:158 | Rent Amount: Rs4000
-2026-05-21 14:49:21 | INFO | test_cases.py:31 | Screenshot Attached To Allure Report: property_details_page
-2026-05-21 14:49:21 | INFO | conftest.py:73 | Closing Browser
-2026-05-21 14:49:24 | INFO | conftest.py:77 | Browser Closed Successfully
-2026-05-21 14:49:24 | INFO | conftest.py:43 | Launching Chrome Browser
-2026-05-21 14:49:28 | INFO | conftest.py:68 | Navigated To 99acres Website
-2026-05-21 14:49:28 | INFO | test_cases.py:42 | Starting Search Flow
-2026-05-21 14:49:28 | INFO | test_cases.py:44 | Clicking Rent Tab
-2026-05-21 14:49:28 | INFO | test_cases.py:46 | Entering Location: Rent in Hyderabad
-2026-05-21 14:49:30 | INFO | test_cases.py:50 | Clicking Search
-2026-05-21 14:49:33 | INFO | test_cases.py:57 | Closing Result Page Popups
-2026-05-21 14:49:55 | INFO | test_cases.py:188 | Applying Owner Filter
-2026-05-21 14:50:48 | INFO | test_cases.py:31 | Screenshot Attached To Allure Report: shortlist_login_popup
-2026-05-21 14:50:48 | INFO | conftest.py:73 | Closing Browser
-2026-05-21 14:50:50 | INFO | conftest.py:77 | Browser Closed Successfully
-2026-05-21 14:50:50 | INFO | conftest.py:43 | Launching Chrome Browser
-2026-05-21 14:50:54 | INFO | conftest.py:68 | Navigated To 99acres Website
-2026-05-21 14:50:55 | INFO | test_cases.py:31 | Screenshot Attached To Allure Report: empty_location_validation
-2026-05-21 14:50:55 | INFO | conftest.py:73 | Closing Browser
-2026-05-21 14:50:57 | INFO | conftest.py:77 | Browser Closed Successfully
-2026-05-21 19:04:29 | INFO | conftest.py:43 | Launching Chrome Browser
-2026-05-21 19:04:36 | INFO | conftest.py:68 | Navigated To 99acres Website
-2026-05-21 19:04:37 | INFO | conftest.py:73 | Closing Browser
-2026-05-21 19:04:39 | INFO | conftest.py:77 | Browser Closed Successfully
-2026-05-21 19:23:48 | INFO | conftest.py:43 | Launching Chrome Browser
-2026-05-21 19:23:52 | INFO | conftest.py:68 | Navigated To 99acres Website
-2026-05-21 19:23:53 | INFO | test_cases.py:247 | Initial URL: https://www.99acres.com/
-2026-05-21 19:23:53 | INFO | test_cases.py:252 | Current URL: https://www.99acres.com/
-2026-05-21 19:23:54 | INFO | conftest.py:73 | Closing Browser
-2026-05-21 19:23:56 | INFO | conftest.py:77 | Browser Closed Successfully
-2026-05-21 19:24:39 | INFO | conftest.py:43 | Launching Chrome Browser
-2026-05-21 19:24:45 | INFO | conftest.py:68 | Navigated To 99acres Website
-2026-05-21 19:24:46 | INFO | test_cases.py:247 | Initial URL: https://www.99acres.com/
-2026-05-21 19:24:46 | INFO | test_cases.py:252 | Current URL: https://www.99acres.com/
-2026-05-21 19:24:46 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: empty_location_validation
-2026-05-21 19:24:46 | INFO | conftest.py:73 | Closing Browser
-2026-05-21 19:24:49 | INFO | conftest.py:77 | Browser Closed Successfully
-2026-05-21 19:28:41 | INFO | conftest.py:43 | Launching Chrome Browser
-2026-05-21 19:28:47 | INFO | conftest.py:68 | Navigated To 99acres Website
-2026-05-21 19:28:48 | INFO | test_cases.py:247 | Initial URL: https://www.99acres.com/
-2026-05-21 19:28:48 | INFO | test_cases.py:252 | Current URL: https://www.99acres.com/
-2026-05-21 19:28:49 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: empty_location_validation
-2026-05-21 19:28:49 | INFO | conftest.py:73 | Closing Browser
-2026-05-21 19:28:51 | INFO | conftest.py:77 | Browser Closed Successfully
-2026-05-21 19:34:02 | INFO | conftest.py:43 | Launching Chrome Browser
-2026-05-21 19:34:05 | INFO | conftest.py:68 | Navigated To 99acres Website
-2026-05-21 19:34:05 | INFO | test_cases.py:25 | Starting Search Flow
-2026-05-21 19:34:05 | INFO | test_cases.py:27 | Clicking Rent Tab
-2026-05-21 19:34:06 | INFO | test_cases.py:29 | Entering Location: Rent in Hyderabad
-2026-05-21 19:34:07 | INFO | test_cases.py:33 | Clicking Search
-2026-05-21 19:34:12 | INFO | test_cases.py:40 | Closing Result Page Popups
-2026-05-21 19:34:18 | INFO | test_cases.py:57 | Results Heading: Property for Rent in Hyderabad
-2026-05-21 19:34:18 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: valid_property_search
-2026-05-21 19:34:18 | INFO | conftest.py:73 | Closing Browser
-2026-05-21 19:34:20 | INFO | conftest.py:77 | Browser Closed Successfully
-2026-05-21 19:37:42 | INFO | conftest.py:43 | Launching Chrome Browser
-2026-05-21 19:37:47 | INFO | conftest.py:68 | Navigated To 99acres Website
-2026-05-21 19:37:47 | INFO | test_cases.py:25 | Starting Search Flow
-2026-05-21 19:37:47 | INFO | test_cases.py:27 | Clicking Rent Tab
-2026-05-21 19:37:47 | INFO | test_cases.py:29 | Entering Location: Rent in Hyderabad
-2026-05-21 19:37:49 | INFO | test_cases.py:33 | Clicking Search
-2026-05-21 19:37:55 | INFO | test_cases.py:40 | Closing Result Page Popups
-2026-05-21 19:38:24 | INFO | test_cases.py:141 | Property Title: 4BHK 5Baths
-Flat/Apartment for Rent
-in Jyothi Cosmos, Hi Tech City, Hyderabad
-2026-05-21 19:38:24 | INFO | test_cases.py:143 | Rent Amount: Rs4
-2026-05-21 19:38:25 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: property_details_page
-2026-05-21 19:38:25 | INFO | conftest.py:73 | Closing Browser
-2026-05-21 19:38:27 | INFO | conftest.py:77 | Browser Closed Successfully
-2026-05-21 19:51:22 | INFO | conftest.py:43 | Launching Chrome Browser
-2026-05-21 19:51:28 | INFO | conftest.py:68 | Navigated To 99acres Website
-2026-05-21 19:51:28 | INFO | test_cases.py:25 | Starting Search Flow
-2026-05-21 19:51:28 | INFO | test_cases.py:27 | Clicking Rent Tab
-2026-05-21 19:51:29 | INFO | test_cases.py:29 | Entering Location: Rent in Hyderabad
-2026-05-21 19:51:31 | INFO | test_cases.py:33 | Clicking Search
-2026-05-21 19:51:35 | INFO | test_cases.py:40 | Closing Result Page Popups
-2026-05-21 19:52:07 | INFO | test_cases.py:141 | Property Title: 3BHK 3Baths
-Flat/Apartment for Rent
-in The vu Residences, Puppalaguda, Hyderabad
-2026-05-21 19:52:07 | INFO | test_cases.py:143 | Rent Amount: 65,000
-2026-05-21 19:52:08 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: property_details_page
-2026-05-21 19:52:08 | INFO | conftest.py:73 | Closing Browser
-2026-05-21 19:52:10 | INFO | conftest.py:77 | Browser Closed Successfully
-2026-05-21 20:57:26 | INFO | conftest.py:43 | Launching Chrome Browser
-2026-05-21 20:57:34 | INFO | conftest.py:68 | Navigated To 99acres Website
-2026-05-21 20:57:34 | INFO | test_end_to_end_flow.py:29 | Hovering Profile Icon
-2026-05-21 20:57:35 | INFO | test_end_to_end_flow.py:33 | Clicking Login/Register
-2026-05-21 20:57:36 | INFO | test_end_to_end_flow.py:37 | Entering Mobile Number
-2026-05-21 20:57:37 | INFO | test_end_to_end_flow.py:41 | Clicking Continue
-2026-05-21 20:57:38 | INFO | test_end_to_end_flow.py:45 | Waiting 20 seconds for manual OTP entry
-2026-05-21 20:57:58 | INFO | test_end_to_end_flow.py:51 | Clicking Verify & Continue
-2026-05-21 20:57:58 | INFO | test_end_to_end_flow.py:55 | Login Successful
-2026-05-21 20:58:01 | INFO | test_end_to_end_flow.py:64 | Clicking Rent Tab
-2026-05-21 20:58:02 | INFO | test_end_to_end_flow.py:68 | Entering Location: Rent in Hyderabad
-2026-05-21 20:58:03 | INFO | test_end_to_end_flow.py:75 | Clicking Search Button
-2026-05-21 20:58:07 | INFO | test_end_to_end_flow.py:86 | Results Heading: Property for Rent in Hyderabad
-2026-05-21 20:58:20 | INFO | test_end_to_end_flow.py:93 | Initial Results Count: 11020
-2026-05-21 20:58:20 | INFO | test_end_to_end_flow.py:101 | Handling Blocking Popups
-2026-05-21 20:58:27 | INFO | test_end_to_end_flow.py:107 | Applying 2 BHK Filter
-2026-05-21 20:58:44 | INFO | test_end_to_end_flow.py:115 | Applying Flat/Apartment Filter
-2026-05-21 20:59:00 | INFO | test_end_to_end_flow.py:124 | Applying Owner Filter
-2026-05-21 20:59:17 | INFO | test_end_to_end_flow.py:133 | Applying Single Men Filter
-2026-05-21 20:59:34 | INFO | test_end_to_end_flow.py:142 | Applying Sort: Price Low To High
-2026-05-21 20:59:43 | INFO | test_end_to_end_flow.py:155 | Verifying Filtered Results
-2026-05-21 20:59:43 | INFO | test_end_to_end_flow.py:161 | Filtered Results Count: 1
-2026-05-21 20:59:43 | INFO | test_end_to_end_flow.py:168 | Selecting First Filtered Property
-2026-05-21 20:59:50 | INFO | test_end_to_end_flow.py:178 | Switching To Property Window
-2026-05-21 21:00:05 | INFO | test_end_to_end_flow.py:188 | Clicking Shortlist Button
-2026-05-21 21:00:26 | INFO | test_end_to_end_flow.py:197 | Opening Owner Details Section
-2026-05-21 21:00:47 | INFO | test_end_to_end_flow.py:206 | Clicking View Phone Number
-2026-05-21 21:01:02 | INFO | test_end_to_end_flow.py:213 | Verifying Contact Section
-2026-05-21 21:01:04 | INFO | test_end_to_end_flow.py:225 | Property Title: Rent
-2026-05-21 21:01:04 | INFO | test_end_to_end_flow.py:229 | Rent Amount: 7000
-2026-05-21 21:01:04 | INFO | test_end_to_end_flow.py:233 | End-to-End Property Flow Completed Successfully
-2026-05-21 21:01:04 | INFO | conftest.py:73 | Closing Browser
-2026-05-21 21:01:06 | INFO | conftest.py:77 | Browser Closed Successfully
-2026-05-21 23:06:33 | INFO | conftest.py:43 | Launching Chrome Browser
-2026-05-21 23:06:38 | INFO | conftest.py:68 | Navigated To 99acres Website
-2026-05-21 23:06:38 | INFO | test_end_to_end_flow.py:35 | Hovering Profile Icon
-2026-05-21 23:06:38 | INFO | test_end_to_end_flow.py:39 | Clicking Login/Register
-2026-05-21 23:06:38 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: login_popup
-2026-05-21 23:06:39 | INFO | test_end_to_end_flow.py:45 | Entering Mobile Number
-2026-05-21 23:06:39 | INFO | test_end_to_end_flow.py:49 | Clicking Continue
-2026-05-21 23:06:40 | INFO | test_end_to_end_flow.py:53 | Waiting 20 seconds for manual OTP entry
-2026-05-21 23:07:00 | INFO | test_end_to_end_flow.py:60 | Clicking Verify & Continue
-2026-05-21 23:07:00 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: login_screenshot
-2026-05-21 23:07:00 | INFO | test_end_to_end_flow.py:66 | Login Successful
-2026-05-21 23:07:03 | INFO | test_end_to_end_flow.py:75 | Clicking Rent Tab
-2026-05-21 23:07:03 | INFO | test_end_to_end_flow.py:79 | Entering Location: Rent in Hyderabad
-2026-05-21 23:07:05 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: location_entered
-2026-05-21 23:07:05 | INFO | test_end_to_end_flow.py:88 | Clicking Search Button
-2026-05-21 23:07:10 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: search_results_page
-2026-05-21 23:07:10 | INFO | test_end_to_end_flow.py:101 | Results Heading: Property for Rent in Hyderabad
-2026-05-21 23:07:22 | INFO | test_end_to_end_flow.py:108 | Initial Results Count: 11022
-2026-05-21 23:07:22 | INFO | test_end_to_end_flow.py:116 | Handling Blocking Popups
-2026-05-21 23:07:29 | INFO | test_end_to_end_flow.py:122 | Applying 2 BHK Filter
-2026-05-21 23:07:45 | INFO | test_end_to_end_flow.py:130 | Applying Flat/Apartment Filter
-2026-05-21 23:08:16 | INFO | test_end_to_end_flow.py:140 | Applying Owner Filter
-2026-05-21 23:08:32 | INFO | test_end_to_end_flow.py:148 | Applying Single Men Filter
-2026-05-21 23:08:48 | INFO | test_end_to_end_flow.py:160 | Applying Sort: Price Low To High
-2026-05-21 23:08:56 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: all_filters_applied
-2026-05-21 23:08:56 | INFO | test_end_to_end_flow.py:177 | Verifying Filtered Results
-2026-05-21 23:08:56 | INFO | test_end_to_end_flow.py:185 | Filtered Results Count: 1
-2026-05-21 23:08:56 | INFO | test_end_to_end_flow.py:194 | Selecting First Filtered Property
-2026-05-21 23:09:03 | INFO | test_end_to_end_flow.py:207 | Switching To Property Window
-2026-05-21 23:09:18 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: property_details_page
-2026-05-21 23:09:18 | INFO | test_end_to_end_flow.py:219 | Clicking Shortlist Button
-2026-05-21 23:09:31 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: shortlist_clicked
-2026-05-21 23:09:37 | INFO | test_end_to_end_flow.py:231 | Opening Owner Details Section
-2026-05-21 23:09:51 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: owner_details
-2026-05-21 23:09:51 | INFO | test_end_to_end_flow.py:241 | Clicking View Phone Number
-2026-05-21 23:10:04 | INFO | test_end_to_end_flow.py:251 | Verifying Contact Section
-2026-05-21 23:10:33 | INFO | test_end_to_end_flow.py:267 | Property Title: Rent
-2026-05-21 23:10:33 | INFO | test_end_to_end_flow.py:272 | Rent Amount: 7000
-2026-05-21 23:10:33 | INFO | test_end_to_end_flow.py:277 | End-to-End Property Flow Completed Successfully
-2026-05-21 23:10:33 | INFO | conftest.py:73 | Closing Browser
-2026-05-21 23:10:36 | INFO | conftest.py:77 | Browser Closed Successfully
-2026-05-21 23:28:16 | INFO | conftest.py:43 | Launching Chrome Browser
-2026-05-21 23:28:19 | INFO | conftest.py:68 | Navigated To 99acres Website
-2026-05-21 23:28:19 | INFO | test_end_to_end_flow.py:35 | Hovering Profile Icon
-2026-05-21 23:28:19 | INFO | test_end_to_end_flow.py:39 | Clicking Login/Register
-2026-05-21 23:28:19 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: login_popup
-2026-05-21 23:28:19 | INFO | test_end_to_end_flow.py:45 | Entering Mobile Number
-2026-05-21 23:28:20 | INFO | test_end_to_end_flow.py:49 | Clicking Continue
-2026-05-21 23:28:21 | INFO | test_end_to_end_flow.py:53 | Waiting 20 seconds for manual OTP entry
-2026-05-21 23:28:41 | INFO | test_end_to_end_flow.py:60 | Clicking Verify & Continue
-2026-05-21 23:28:41 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: login_screenshot
-2026-05-21 23:28:41 | INFO | test_end_to_end_flow.py:66 | Login Successful
-2026-05-21 23:28:59 | INFO | test_end_to_end_flow.py:75 | Clicking Rent Tab
-2026-05-21 23:28:59 | INFO | test_end_to_end_flow.py:79 | Entering Location: Rent in Hyderabad
-2026-05-21 23:29:00 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: location_entered
-2026-05-21 23:29:00 | INFO | test_end_to_end_flow.py:88 | Clicking Search Button
-2026-05-21 23:29:05 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: search_results_page
-2026-05-21 23:29:05 | INFO | test_end_to_end_flow.py:103 | Results Heading: Property for Rent in Hyderabad
-2026-05-21 23:29:18 | INFO | test_end_to_end_flow.py:110 | Initial Results Count: 11023
-2026-05-21 23:29:18 | INFO | test_end_to_end_flow.py:118 | Handling Blocking Popups
-2026-05-21 23:29:25 | INFO | test_end_to_end_flow.py:124 | Applying 2 BHK Filter
-2026-05-21 23:29:41 | INFO | test_end_to_end_flow.py:132 | Applying Flat/Apartment Filter
-2026-05-21 23:29:57 | INFO | test_end_to_end_flow.py:142 | Applying Owner Filter
-2026-05-21 23:30:12 | INFO | test_end_to_end_flow.py:150 | Applying Single Men Filter
-2026-05-21 23:30:43 | INFO | test_end_to_end_flow.py:162 | Applying Sort: Price Low To High
-2026-05-21 23:30:52 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: all_filters_applied
-2026-05-21 23:30:52 | INFO | test_end_to_end_flow.py:182 | Verifying Filtered Results
-2026-05-21 23:30:52 | INFO | test_end_to_end_flow.py:190 | Filtered Results Count: 1
-2026-05-21 23:30:52 | INFO | test_end_to_end_flow.py:199 | Selecting First Filtered Property
-2026-05-21 23:30:59 | INFO | test_end_to_end_flow.py:212 | Switching To Property Window
-2026-05-21 23:31:07 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: property_details_page
-2026-05-21 23:31:07 | INFO | test_end_to_end_flow.py:226 | Clicking Shortlist Button
-2026-05-21 23:31:20 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: shortlist_clicked
-2026-05-21 23:31:27 | INFO | test_end_to_end_flow.py:239 | Opening Owner Details Section
-2026-05-21 23:31:40 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: owner_details
-2026-05-21 23:31:40 | INFO | test_end_to_end_flow.py:249 | Clicking View Phone Number
-2026-05-21 23:31:54 | INFO | test_end_to_end_flow.py:259 | Verifying Contact Section
-2026-05-21 23:32:36 | INFO | conftest.py:73 | Closing Browser
-2026-05-21 23:32:38 | INFO | conftest.py:77 | Browser Closed Successfully
-2026-05-21 23:44:16 | INFO | conftest.py:43 | Launching Chrome Browser
-2026-05-21 23:44:18 | INFO | conftest.py:68 | Navigated To 99acres Website
-2026-05-21 23:44:18 | INFO | test_end_to_end_flow.py:35 | Hovering Profile Icon
-2026-05-21 23:44:19 | INFO | test_end_to_end_flow.py:39 | Clicking Login/Register
-2026-05-21 23:44:19 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: login_popup
-2026-05-21 23:44:19 | INFO | test_end_to_end_flow.py:45 | Entering Mobile Number
-2026-05-21 23:44:20 | INFO | test_end_to_end_flow.py:49 | Clicking Continue
-2026-05-21 23:44:21 | INFO | test_end_to_end_flow.py:53 | Waiting 20 seconds for manual OTP entry
-2026-05-21 23:44:41 | INFO | test_end_to_end_flow.py:60 | Clicking Verify & Continue
-2026-05-21 23:44:41 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: login_screenshot
-2026-05-21 23:44:41 | INFO | test_end_to_end_flow.py:66 | Login Successful
-2026-05-21 23:44:59 | INFO | test_end_to_end_flow.py:75 | Clicking Rent Tab
-2026-05-21 23:44:59 | INFO | test_end_to_end_flow.py:79 | Entering Location: Rent in Hyderabad
-2026-05-21 23:45:00 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: location_entered
-2026-05-21 23:45:00 | INFO | test_end_to_end_flow.py:88 | Clicking Search Button
-2026-05-21 23:45:04 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: search_results_page
-2026-05-21 23:45:04 | INFO | test_end_to_end_flow.py:103 | Results Heading: Property for Rent in Hyderabad
-2026-05-21 23:45:17 | INFO | test_end_to_end_flow.py:110 | Initial Results Count: 11027
-2026-05-21 23:45:17 | INFO | test_end_to_end_flow.py:118 | Handling Blocking Popups
-2026-05-21 23:45:24 | INFO | test_end_to_end_flow.py:124 | Applying 2 BHK Filter
-2026-05-21 23:45:40 | INFO | test_end_to_end_flow.py:132 | Applying Flat/Apartment Filter
-2026-05-21 23:45:56 | INFO | test_end_to_end_flow.py:142 | Applying Owner Filter
-2026-05-21 23:46:11 | INFO | test_end_to_end_flow.py:150 | Applying Single Men Filter
-2026-05-21 23:46:27 | INFO | test_end_to_end_flow.py:162 | Applying Sort: Price Low To High
-2026-05-21 23:46:36 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: all_filters_applied
-2026-05-21 23:46:36 | INFO | test_end_to_end_flow.py:182 | Verifying Filtered Results
-2026-05-21 23:46:36 | INFO | test_end_to_end_flow.py:190 | Filtered Results Count: 1
-2026-05-21 23:46:36 | INFO | test_end_to_end_flow.py:199 | Selecting First Filtered Property
-2026-05-21 23:46:43 | INFO | test_end_to_end_flow.py:212 | Switching To Property Window
-2026-05-21 23:46:51 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: property_details_page
-2026-05-21 23:46:51 | INFO | test_end_to_end_flow.py:225 | Property Title: 2BHK 1Bath
+2026-05-22 08:47:55 | INFO | conftest.py:43 | Launching Chrome Browser
+2026-05-22 08:47:58 | INFO | conftest.py:68 | Navigated To 99acres Website
+2026-05-22 08:47:58 | INFO | test_end_to_end_flow.py:35 | Hovering Profile Icon
+2026-05-22 08:47:59 | INFO | test_end_to_end_flow.py:39 | Clicking Login/Register
+2026-05-22 08:48:00 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: login_popup
+2026-05-22 08:48:00 | INFO | test_end_to_end_flow.py:47 | Entering Mobile Number
+2026-05-22 08:48:01 | INFO | test_end_to_end_flow.py:51 | Clicking Continue
+2026-05-22 08:48:01 | INFO | test_end_to_end_flow.py:55 | Waiting 20 seconds for manual OTP entry
+2026-05-22 08:48:21 | INFO | test_end_to_end_flow.py:62 | Clicking Verify & Continue
+2026-05-22 08:48:22 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: login_screenshot
+2026-05-22 08:48:22 | INFO | test_end_to_end_flow.py:68 | Login Successful
+2026-05-22 08:48:41 | INFO | test_end_to_end_flow.py:77 | Clicking Rent Tab
+2026-05-22 08:48:41 | INFO | test_end_to_end_flow.py:81 | Entering Location: Rent in Hyderabad
+2026-05-22 08:48:43 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: location_entered
+2026-05-22 08:48:43 | INFO | test_end_to_end_flow.py:90 | Clicking Search Button
+2026-05-22 08:48:48 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: search_results_page
+2026-05-22 08:48:49 | INFO | test_end_to_end_flow.py:107 | Results Heading: Property for Rent in Hyderabad
+2026-05-22 08:49:02 | INFO | test_end_to_end_flow.py:114 | Initial Results Count: 10907
+2026-05-22 08:49:02 | INFO | test_end_to_end_flow.py:122 | Handling Blocking Popups
+2026-05-22 08:49:10 | INFO | test_end_to_end_flow.py:128 | Applying 2 BHK Filter
+2026-05-22 08:49:19 | INFO | test_end_to_end_flow.py:136 | Applying Flat/Apartment Filter
+2026-05-22 08:49:28 | INFO | test_end_to_end_flow.py:146 | Applying Owner Filter
+2026-05-22 08:49:37 | INFO | test_end_to_end_flow.py:154 | Applying Single Men Filter
+2026-05-22 08:49:46 | INFO | test_end_to_end_flow.py:166 | Applying Sort: Price Low To High
+2026-05-22 08:49:56 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: all_filters_applied
+2026-05-22 08:49:56 | INFO | test_end_to_end_flow.py:186 | Verifying Filtered Results
+2026-05-22 08:49:56 | INFO | test_end_to_end_flow.py:194 | Filtered Results Count: 3632
+2026-05-22 08:49:56 | INFO | test_end_to_end_flow.py:203 | Selecting First Filtered Property
+2026-05-22 08:50:04 | INFO | test_end_to_end_flow.py:216 | Switching To Property Window
+2026-05-22 08:50:12 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: property_details_page
+2026-05-22 08:50:12 | INFO | test_end_to_end_flow.py:229 | Property Title: 2BHK 1Bath
 Flat/Apartment for Rent
 in Rajiv Sabgrahu, Nagole, Hyderabad
-2026-05-21 23:46:51 | INFO | test_end_to_end_flow.py:229 | Rent Amount: 7000
-2026-05-21 23:46:51 | INFO | test_end_to_end_flow.py:237 | Clicking Shortlist Button
-2026-05-21 23:47:04 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: shortlist_clicked
-2026-05-21 23:47:11 | INFO | test_end_to_end_flow.py:250 | Opening Owner Details Section
-2026-05-21 23:47:24 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: owner_details
-2026-05-21 23:47:24 | INFO | test_end_to_end_flow.py:260 | Clicking View Phone Number
-2026-05-21 23:47:38 | INFO | test_end_to_end_flow.py:270 | Verifying Contact Section
-2026-05-21 23:47:45 | INFO | test_end_to_end_flow.py:278 | End-to-End Property Flow Completed Successfully
-2026-05-21 23:47:45 | INFO | conftest.py:73 | Closing Browser
-2026-05-21 23:47:48 | INFO | conftest.py:77 | Browser Closed Successfully
-2026-05-22 00:19:14 | INFO | conftest.py:43 | Launching Chrome Browser
-2026-05-22 00:19:20 | INFO | conftest.py:68 | Navigated To 99acres Website
-2026-05-22 00:19:20 | INFO | test_end_to_end_flow.py:35 | Hovering Profile Icon
-2026-05-22 00:19:20 | INFO | test_end_to_end_flow.py:39 | Clicking Login/Register
-2026-05-22 00:19:20 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: login_popup
-2026-05-22 00:19:20 | INFO | test_end_to_end_flow.py:47 | Entering Mobile Number
-2026-05-22 00:19:21 | INFO | test_end_to_end_flow.py:51 | Clicking Continue
-2026-05-22 00:19:21 | INFO | test_end_to_end_flow.py:55 | Waiting 20 seconds for manual OTP entry
-2026-05-22 00:19:41 | INFO | test_end_to_end_flow.py:62 | Clicking Verify & Continue
-2026-05-22 00:19:42 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: login_screenshot
-2026-05-22 00:19:42 | INFO | test_end_to_end_flow.py:68 | Login Successful
-2026-05-22 00:20:00 | INFO | test_end_to_end_flow.py:77 | Clicking Rent Tab
-2026-05-22 00:20:00 | INFO | test_end_to_end_flow.py:81 | Entering Location: Rent in Hyderabad
-2026-05-22 00:20:01 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: location_entered
-2026-05-22 00:20:01 | INFO | test_end_to_end_flow.py:90 | Clicking Search Button
-2026-05-22 00:20:08 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: search_results_page
-2026-05-22 00:20:08 | INFO | test_end_to_end_flow.py:107 | Results Heading: Property for Rent in Hyderabad
-2026-05-22 00:20:20 | INFO | test_end_to_end_flow.py:114 | Initial Results Count: 11027
-2026-05-22 00:20:20 | INFO | test_end_to_end_flow.py:122 | Handling Blocking Popups
-2026-05-22 00:20:27 | INFO | test_end_to_end_flow.py:128 | Applying 2 BHK Filter
-2026-05-22 00:20:27 | INFO | conftest.py:73 | Closing Browser
-2026-05-22 00:20:29 | INFO | conftest.py:77 | Browser Closed Successfully
-2026-05-22 00:23:32 | INFO | conftest.py:43 | Launching Chrome Browser
-2026-05-22 00:23:36 | INFO | conftest.py:68 | Navigated To 99acres Website
-2026-05-22 00:23:36 | INFO | test_end_to_end_flow.py:35 | Hovering Profile Icon
-2026-05-22 00:23:36 | INFO | test_end_to_end_flow.py:39 | Clicking Login/Register
-2026-05-22 00:23:37 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: login_popup
-2026-05-22 00:23:37 | INFO | test_end_to_end_flow.py:47 | Entering Mobile Number
-2026-05-22 00:23:37 | INFO | test_end_to_end_flow.py:51 | Clicking Continue
-2026-05-22 00:23:38 | INFO | test_end_to_end_flow.py:55 | Waiting 20 seconds for manual OTP entry
-2026-05-22 00:23:58 | INFO | test_end_to_end_flow.py:62 | Clicking Verify & Continue
-2026-05-22 00:23:58 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: login_screenshot
-2026-05-22 00:23:58 | INFO | test_end_to_end_flow.py:68 | Login Successful
-2026-05-22 00:24:16 | INFO | test_end_to_end_flow.py:77 | Clicking Rent Tab
-2026-05-22 00:24:16 | INFO | test_end_to_end_flow.py:81 | Entering Location: Rent in Hyderabad
-2026-05-22 00:24:17 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: location_entered
-2026-05-22 00:24:17 | INFO | test_end_to_end_flow.py:90 | Clicking Search Button
-2026-05-22 00:24:21 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: search_results_page
-2026-05-22 00:24:21 | INFO | test_end_to_end_flow.py:107 | Results Heading: Property for Rent in Hyderabad
-2026-05-22 00:24:33 | INFO | test_end_to_end_flow.py:114 | Initial Results Count: 11027
-2026-05-22 00:24:33 | INFO | test_end_to_end_flow.py:122 | Handling Blocking Popups
-2026-05-22 00:24:40 | INFO | test_end_to_end_flow.py:128 | Applying 2 BHK Filter
-2026-05-22 00:24:48 | INFO | test_end_to_end_flow.py:136 | Applying Flat/Apartment Filter
-2026-05-22 00:24:56 | INFO | test_end_to_end_flow.py:146 | Applying Owner Filter
-2026-05-22 00:25:04 | INFO | test_end_to_end_flow.py:154 | Applying Single Men Filter
-2026-05-22 00:25:13 | INFO | test_end_to_end_flow.py:166 | Applying Sort: Price Low To High
-2026-05-22 00:25:21 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: all_filters_applied
-2026-05-22 00:25:21 | INFO | test_end_to_end_flow.py:186 | Verifying Filtered Results
-2026-05-22 00:25:21 | INFO | test_end_to_end_flow.py:194 | Filtered Results Count: 3672
-2026-05-22 00:25:21 | INFO | test_end_to_end_flow.py:203 | Selecting First Filtered Property
-2026-05-22 00:25:28 | INFO | test_end_to_end_flow.py:216 | Switching To Property Window
-2026-05-22 00:25:36 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: property_details_page
-2026-05-22 00:25:36 | INFO | test_end_to_end_flow.py:229 | Property Title: 2BHK 1Bath
-Flat/Apartment for Rent
-in Rajiv Sabgrahu, Nagole, Hyderabad
-2026-05-22 00:25:36 | INFO | test_end_to_end_flow.py:233 | Rent Amount: 7000
-2026-05-22 00:25:36 | INFO | test_end_to_end_flow.py:241 | Clicking Shortlist Button
-2026-05-22 00:25:49 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: shortlist_clicked
-2026-05-22 00:25:56 | INFO | test_end_to_end_flow.py:254 | Opening Owner Details Section
-2026-05-22 00:26:09 | INFO | test_end_to_end_flow.py:264 | Clicking View Phone Number
-2026-05-22 00:26:23 | INFO | test_end_to_end_flow.py:274 | Verifying Contact Section
-2026-05-22 00:26:24 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: owner_details
-2026-05-22 00:26:30 | INFO | test_end_to_end_flow.py:283 | End-to-End Property Flow Completed Successfully
-2026-05-22 00:26:30 | INFO | conftest.py:73 | Closing Browser
-2026-05-22 00:26:33 | INFO | conftest.py:77 | Browser Closed Successfully
+2026-05-22 08:50:12 | INFO | test_end_to_end_flow.py:233 | Rent Amount: 7000
+2026-05-22 08:50:12 | INFO | test_end_to_end_flow.py:241 | Clicking Shortlist Button
+2026-05-22 08:50:26 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: shortlist_clicked
+2026-05-22 08:50:33 | INFO | test_end_to_end_flow.py:254 | Opening Owner Details Section
+2026-05-22 08:50:47 | INFO | test_end_to_end_flow.py:264 | Clicking View Phone Number
+2026-05-22 08:51:01 | INFO | test_end_to_end_flow.py:274 | Verifying Contact Section
+2026-05-22 08:51:18 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: owner_details
+2026-05-22 08:51:25 | INFO | test_end_to_end_flow.py:285 | End-to-End Property Flow Completed Successfully
+2026-05-22 08:51:25 | INFO | conftest.py:73 | Closing Browser
+2026-05-22 08:51:27 | INFO | conftest.py:77 | Browser Closed Successfully
+
+2026-05-22 18:09:07 | INFO | conftest.py:43 | Launching Chrome Browser
+2026-05-22 18:09:13 | INFO | conftest.py:68 | Navigated To 99acres Website
+2026-05-22 18:09:13 | INFO | test_end_to_end_flow.py:33 | Hovering Profile Icon
+2026-05-22 18:09:13 | INFO | test_end_to_end_flow.py:35 | Clicking Login/Register
+2026-05-22 18:09:15 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: login_popup
+2026-05-22 18:09:15 | INFO | test_end_to_end_flow.py:38 | Entering Mobile Number
+2026-05-22 18:09:16 | INFO | test_end_to_end_flow.py:40 | Clicking Continue
+2026-05-22 18:09:17 | INFO | test_end_to_end_flow.py:42 | Waiting 20 seconds for manual OTP entry
+2026-05-22 18:09:37 | INFO | test_end_to_end_flow.py:44 | Clicking Verify & Continue
+2026-05-22 18:09:37 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: login_screenshot
+2026-05-22 18:09:37 | INFO | test_end_to_end_flow.py:47 | Login Successful
+2026-05-22 18:09:56 | INFO | test_end_to_end_flow.py:54 | Clicking Rent Tab
+2026-05-22 18:09:57 | INFO | test_end_to_end_flow.py:56 | Entering Location: Rent in Hyderabad
+2026-05-22 18:09:58 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: location_entered
+2026-05-22 18:09:58 | INFO | test_end_to_end_flow.py:59 | Clicking Search Button
+2026-05-22 18:10:02 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: search_results_page
+2026-05-22 18:10:02 | INFO | test_end_to_end_flow.py:72 | Results Heading: Property for Rent in Hyderabad
+2026-05-22 18:10:17 | INFO | test_end_to_end_flow.py:76 | Initial Results Count: 10976
+2026-05-22 18:10:17 | INFO | test_end_to_end_flow.py:80 | Handling Blocking Popups
+2026-05-22 18:10:24 | INFO | test_end_to_end_flow.py:85 | Applying 2 BHK Filter
+2026-05-22 18:10:32 | INFO | test_end_to_end_flow.py:91 | Applying Flat/Apartment Filter
+2026-05-22 18:10:57 | INFO | conftest.py:73 | Closing Browser
+2026-05-22 18:11:00 | INFO | conftest.py:77 | Browser Closed Successfully
