@@ -1,0 +1,27 @@
+@manual_otp
+Feature: 99acres end-to-end rental property flow # features/end_to_end.feature:2
+  As a logged-in 99acres user
+  I want to search, filter, shortlist, and view owner contact details
+  So that the complete rental property journey is validated
+  Scenario: Complete end-to-end property search and owner contact flow  # features/end_to_end.feature:7
+    When I log in using the test data mobile number                     # features/steps/common_steps.py:73
+    And I wait 20 seconds for manual OTP entry                          # features/steps/common_steps.py:94
+    And I verify the OTP and continue                                   # features/steps/common_steps.py:102
+    And I search rental properties using the test data location         # features/steps/property_steps.py:14
+    Then the search results page should be displayed                    # features/steps/common_steps.py:109
+    When I close blocking popups on the search results page             # features/steps/filter_steps.py:9
+    And I apply the 2 BHK filter                                        # features/steps/filter_steps.py:14
+    And I apply the Flat/Apartment filter                               # features/steps/filter_steps.py:19
+    And I apply the Owner filter                                        # features/steps/filter_steps.py:24
+    And I apply the Single Men filter                                   # features/steps/filter_steps.py:29
+    And I sort results by price low to high                             # features/steps/filter_steps.py:34
+    Then all required filters should be applied                         # features/steps/filter_steps.py:52
+    And filtered results should be visible                              # features/steps/filter_steps.py:39
+    When I open the first property from search results                  # features/steps/property_steps.py:21
+    And I switch to the property details window                         # features/steps/property_steps.py:26
+    Then the property title and rent amount should be visible           # features/steps/property_steps.py:72
+    When I click the shortlist button                                   # features/steps/property_steps.py:32
+    And I open the owner details section                                # features/steps/property_steps.py:39
+    And I click the view phone number button                            # features/steps/property_steps.py:45
+    Then the contact section should be displayed                        # features/steps/property_steps.py:86
+

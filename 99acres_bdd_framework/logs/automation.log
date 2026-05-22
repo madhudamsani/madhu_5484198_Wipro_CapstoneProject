@@ -1,0 +1,110 @@
+2026-05-22 23:25:20 | INFO | environment.py:107 | Framework Initialization Completed
+2026-05-22 23:25:20 | INFO | environment.py:120 | Starting Scenario: Verify valid property search
+2026-05-22 23:25:21 | INFO | environment.py:192 | Navigated To 99acres Website
+2026-05-22 23:25:21 | INFO | common_steps.py:51 | Clicking Rent Tab
+2026-05-22 23:25:23 | INFO | common_steps.py:54 | Entering Location: Rent in Hyderabad
+2026-05-22 23:25:25 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: location_entered
+2026-05-22 23:25:25 | INFO | common_steps.py:58 | Clicking Search Button
+2026-05-22 23:25:31 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: search_results_page
+2026-05-22 23:25:36 | INFO | property_steps.py:53 | Results Heading: Property for Rent in Hyderabad
+2026-05-22 23:25:36 | INFO | environment.py:238 | Ending Scenario: Verify valid property search
+2026-05-22 23:25:39 | INFO | environment.py:267 | Browser Closed Successfully
+2026-05-22 23:25:39 | INFO | environment.py:120 | Starting Scenario: Verify 2 BHK filter
+2026-05-22 23:25:42 | INFO | environment.py:192 | Navigated To 99acres Website
+2026-05-22 23:25:42 | INFO | common_steps.py:51 | Clicking Rent Tab
+2026-05-22 23:25:43 | INFO | common_steps.py:54 | Entering Location: Rent in Hyderabad
+2026-05-22 23:25:44 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: location_entered
+2026-05-22 23:25:44 | INFO | common_steps.py:58 | Clicking Search Button
+2026-05-22 23:25:50 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: search_results_page
+2026-05-22 23:26:04 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: filtered_results
+2026-05-22 23:26:04 | INFO | environment.py:238 | Ending Scenario: Verify 2 BHK filter
+2026-05-22 23:26:06 | INFO | environment.py:267 | Browser Closed Successfully
+2026-05-22 23:26:06 | INFO | environment.py:120 | Starting Scenario: Verify searched location is displayed in search bar
+2026-05-22 23:26:10 | INFO | environment.py:192 | Navigated To 99acres Website
+2026-05-22 23:26:10 | INFO | common_steps.py:51 | Clicking Rent Tab
+2026-05-22 23:26:10 | INFO | common_steps.py:54 | Entering Location: Rent in Hyderabad
+2026-05-22 23:26:12 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: location_entered
+2026-05-22 23:26:12 | INFO | common_steps.py:58 | Clicking Search Button
+2026-05-22 23:26:18 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: search_results_page
+2026-05-22 23:26:23 | INFO | property_steps.py:67 | Displayed Location: Hyderabad
+2026-05-22 23:26:24 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: search_location_displayed
+2026-05-22 23:26:24 | INFO | environment.py:238 | Ending Scenario: Verify searched location is displayed in search bar
+2026-05-22 23:26:26 | INFO | environment.py:267 | Browser Closed Successfully
+2026-05-22 23:26:26 | INFO | environment.py:120 | Starting Scenario: Verify property details page
+2026-05-22 23:26:33 | INFO | environment.py:192 | Navigated To 99acres Website
+2026-05-22 23:26:33 | INFO | common_steps.py:51 | Clicking Rent Tab
+2026-05-22 23:26:33 | INFO | common_steps.py:54 | Entering Location: Rent in Hyderabad
+2026-05-22 23:26:34 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: location_entered
+2026-05-22 23:26:34 | INFO | common_steps.py:58 | Clicking Search Button
+2026-05-22 23:26:37 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: search_results_page
+2026-05-22 23:27:00 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: property_details_page
+2026-05-22 23:27:00 | INFO | property_steps.py:79 | Property Title: 3BHK 3Baths
+Flat/Apartment for Rent
+in Aparna Lake Breeze, Chandanagar, Hyderabad
+2026-05-22 23:27:00 | INFO | property_steps.py:80 | Rent Amount: 42,000
+2026-05-22 23:27:00 | INFO | environment.py:238 | Ending Scenario: Verify property details page
+2026-05-22 23:27:02 | INFO | environment.py:267 | Browser Closed Successfully
+2026-05-23 00:40:05 | INFO | environment.py:107 | Framework Initialization Completed
+2026-05-23 00:40:05 | INFO | environment.py:120 | Starting Scenario: Verify 2 BHK filter
+2026-05-23 00:40:13 | INFO | environment.py:192 | Navigated To 99acres Website
+2026-05-23 00:40:13 | INFO | common_steps.py:81 | Clicking Rent Tab
+2026-05-23 00:40:14 | INFO | common_steps.py:84 | Entering Location: Rent in Hyderabad
+2026-05-23 00:40:16 | INFO | common_steps.py:88 | Clicking Search Button
+2026-05-23 00:40:34 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: 2_bhk_filter_verified
+2026-05-23 00:40:34 | INFO | environment.py:238 | Ending Scenario: Verify 2 BHK filter
+2026-05-23 00:40:38 | INFO | environment.py:267 | Browser Closed Successfully
+2026-05-23 00:52:07 | INFO | environment.py:107 | Framework Initialization Completed
+2026-05-23 00:52:07 | INFO | environment.py:120 | Starting Scenario: Verify valid property search
+2026-05-23 00:52:11 | INFO | environment.py:192 | Navigated To 99acres Website
+2026-05-23 00:52:11 | INFO | common_steps.py:81 | Clicking Rent Tab
+2026-05-23 00:52:11 | INFO | common_steps.py:84 | Entering Location: Rent in Hyderabad
+2026-05-23 00:52:13 | INFO | common_steps.py:88 | Clicking Search Button
+2026-05-23 00:52:24 | INFO | property_steps.py:56 | Results Heading: Property for Rent in Hyderabad
+2026-05-23 00:52:24 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: results_heading_verified
+2026-05-23 00:52:24 | INFO | environment.py:238 | Ending Scenario: Verify valid property search
+2026-05-23 00:52:26 | INFO | environment.py:267 | Browser Closed Successfully
+2026-05-23 00:52:26 | INFO | environment.py:120 | Starting Scenario: Verify 2 BHK filter
+2026-05-23 00:52:31 | INFO | environment.py:192 | Navigated To 99acres Website
+2026-05-23 00:52:31 | INFO | common_steps.py:81 | Clicking Rent Tab
+2026-05-23 00:52:31 | INFO | common_steps.py:84 | Entering Location: Rent in Hyderabad
+2026-05-23 00:52:33 | INFO | common_steps.py:88 | Clicking Search Button
+2026-05-23 00:52:50 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: 2_bhk_filter_verified
+2026-05-23 00:52:50 | INFO | environment.py:238 | Ending Scenario: Verify 2 BHK filter
+2026-05-23 00:52:52 | INFO | environment.py:267 | Browser Closed Successfully
+2026-05-23 00:52:52 | INFO | environment.py:120 | Starting Scenario: Verify searched location is displayed in search bar
+2026-05-23 00:52:55 | INFO | environment.py:192 | Navigated To 99acres Website
+2026-05-23 00:52:55 | INFO | common_steps.py:81 | Clicking Rent Tab
+2026-05-23 00:52:56 | INFO | common_steps.py:84 | Entering Location: Rent in Hyderabad
+2026-05-23 00:52:57 | INFO | common_steps.py:88 | Clicking Search Button
+2026-05-23 00:53:05 | INFO | property_steps.py:71 | Displayed Location: Hyderabad
+2026-05-23 00:53:05 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: search_location_displayed
+2026-05-23 00:53:05 | INFO | environment.py:238 | Ending Scenario: Verify searched location is displayed in search bar
+2026-05-23 00:53:08 | INFO | environment.py:267 | Browser Closed Successfully
+2026-05-23 00:53:08 | INFO | environment.py:120 | Starting Scenario: Verify property details page
+2026-05-23 00:53:11 | INFO | environment.py:192 | Navigated To 99acres Website
+2026-05-23 00:53:11 | INFO | common_steps.py:81 | Clicking Rent Tab
+2026-05-23 00:53:11 | INFO | common_steps.py:84 | Entering Location: Rent in Hyderabad
+2026-05-23 00:53:13 | INFO | common_steps.py:88 | Clicking Search Button
+2026-05-23 00:53:41 | INFO | property_steps.py:83 | Property Title: 3BHK 3Baths
+Flat/Apartment for Rent
+in Honer Aquantis, Gopanpally, Hyderabad
+2026-05-23 00:53:41 | INFO | property_steps.py:84 | Rent Amount: 55,000
+2026-05-23 00:53:42 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: property_details_verified
+2026-05-23 00:53:42 | INFO | environment.py:238 | Ending Scenario: Verify property details page
+2026-05-23 00:53:44 | INFO | environment.py:267 | Browser Closed Successfully
+2026-05-23 00:54:33 | INFO | environment.py:107 | Framework Initialization Completed
+2026-05-23 00:54:33 | INFO | environment.py:120 | Starting Scenario: Verify shortlist requires login
+2026-05-23 00:54:37 | INFO | environment.py:192 | Navigated To 99acres Website
+2026-05-23 00:54:37 | INFO | common_steps.py:81 | Clicking Rent Tab
+2026-05-23 00:54:37 | INFO | common_steps.py:84 | Entering Location: Rent in Hyderabad
+2026-05-23 00:54:39 | INFO | common_steps.py:88 | Clicking Search Button
+2026-05-23 00:55:43 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: shortlist_login_popup
+2026-05-23 00:55:43 | INFO | environment.py:238 | Ending Scenario: Verify shortlist requires login
+2026-05-23 00:55:45 | INFO | environment.py:267 | Browser Closed Successfully
+2026-05-23 00:55:45 | INFO | environment.py:120 | Starting Scenario: Verify empty location validation
+2026-05-23 00:55:49 | INFO | environment.py:192 | Navigated To 99acres Website
+2026-05-23 00:55:50 | INFO | negative_steps.py:35 | Initial URL: https://www.99acres.com/
+2026-05-23 00:55:50 | INFO | negative_steps.py:36 | Current URL: https://www.99acres.com/
+2026-05-23 00:55:50 | INFO | home_page.py:280 | Screenshot Attached To Allure Report: empty_location_validation
+2026-05-23 00:55:50 | INFO | environment.py:238 | Ending Scenario: Verify empty location validation
+2026-05-23 00:55:52 | INFO | environment.py:267 | Browser Closed Successfully
