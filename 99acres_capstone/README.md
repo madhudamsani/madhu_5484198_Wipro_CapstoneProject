@@ -39,10 +39,12 @@ The current framework focuses on the rent journey: opening 99acres, searching fo
 |   |-- excel_reader.py
 |   |-- logger.py
 |   `-- __init__.py
-|-- allure-results/
-|-- reports/allure-report/
+|-- reports/
+|   |--allure-report/
+|   |--allure-results/
 |-- screenshots/
 |-- logs/
+|   |--automation.log
 |-- 99acres_Automation_Project_Documentation.docx
 |-- conftest.py
 |-- pytest.ini
@@ -143,8 +145,6 @@ The workbook contains columns:
 - `mobile_number`
 - `location`
 
-The current reader uses the first data row only: cell `A2` for `mobile_number` and cell `B2` for `location`.
-
 ## Setup
 
 Create and activate a virtual environment:
@@ -181,7 +181,7 @@ pytest
 Run with Allure result output:
 
 ```powershell
-pytest --alluredir=allure-results
+pytest 
 ```
 
 Run the independent test suite:
@@ -193,13 +193,13 @@ pytest tests/test_cases.py
 Run only the end-to-end flow:
 
 ```powershell
-pytest tests/test_end_to_end_flow.py --alluredir=allure-results
+pytest tests/test_end_to_end_flow.py 
 ```
 
 The project has `pytest.ini` configured with:
 
 ```ini
-addopts = -v -s
+addopts = -v -s --alluredir=reports/allure-results
 testpaths = tests
 python_files = test_*.py
 ```
@@ -208,7 +208,7 @@ python_files = test_*.py
 
 The repository already contains generated Allure result/report artifacts:
 
-- `allure-results/`: raw Allure JSON, text, and PNG attachments.
+- `reports/allure-results/`: raw Allure JSON, text, and PNG attachments.
 - `reports/allure-report/`: generated static Allure HTML report.
 
 To generate a fresh report, install the Allure command-line tool separately, then run:
