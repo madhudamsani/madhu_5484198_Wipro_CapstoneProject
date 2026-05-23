@@ -4,8 +4,6 @@ from selenium.common.exceptions import (
     WebDriverException
 )
 
-from selenium.webdriver.common.by import By
-
 from selenium.webdriver.support import (
     expected_conditions as EC
 )
@@ -17,9 +15,12 @@ from selenium.webdriver.support.ui import (
 from config.config import (
     get_implicit_wait
 )
+from locators.property_details_page_locators import (
+    PropertyDetailsPageLocators
+)
 
 
-class PropertyDetailsPage:
+class PropertyDetailsPage(PropertyDetailsPageLocators):
 
     def __init__(self, driver):
 
@@ -29,98 +30,6 @@ class PropertyDetailsPage:
             driver,
             40
         )
-
-    # =========================
-    # POPUPS
-    # =========================
-
-    ok_understood_button = (
-        By.XPATH,
-        "//*[self::button or self::div or self::span]"
-        "[translate(normalize-space(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')="
-        "'ok, understood']"
-    )
-
-    cookie_ok_button = (
-        By.XPATH,
-        "//*["
-        "(self::button or self::div or self::span)"
-        " and (normalize-space()='Okay' "
-        "or normalize-space()='OK')"
-        "] | //button["
-        "contains("
-        "translate(normalize-space(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),"
-        "'accept') "
-        "or contains("
-        "translate(normalize-space(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),"
-        "'agree')]"
-    )
-
-    fraud_alert_close_button = (
-        By.XPATH,
-        "//*[@id='app']/div/div[5]/div/div[1]/i"
-    )
-
-    # =========================
-    # LOCATORS
-    # =========================
-
-    rent_amount = (
-        By.ID,
-        "pdPrice"
-    )
-
-    shortlist_button = (
-        By.ID,
-        "shortListBtn"
-    )
-
-    owner_details_tab = (
-        By.XPATH,
-        "//*[self::button or self::div or self::span or self::a]"
-        "[contains("
-        "translate(normalize-space(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),"
-        "'owner details')]"
-    )
-
-    view_phone_button = (
-        By.XPATH,
-        "//*[@id='OwnerDetails']/div/input"
-    )
-
-    contact_section = (
-        By.XPATH,
-        "//*[contains("
-        "translate(normalize-space(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),"
-        "'contact') "
-        "or contains("
-        "translate(normalize-space(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),"
-        "'phone') "
-        "or contains("
-        "translate(normalize-space(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),"
-        "'login') "
-        "or contains("
-        "translate(normalize-space(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),"
-        "'register')]"
-    )
-
-    property_title_locators = [
-
-        (
-            By.XPATH,
-            "//h1"
-        ),
-
-        (
-            By.XPATH,
-            "//h2"
-        ),
-
-        (
-            By.XPATH,
-            "//*[contains(text(),'for Rent')]"
-        )
-    ]
 
     # =========================
     # COMMON METHODS
@@ -457,8 +366,7 @@ class PropertyDetailsPage:
     def extract_title_from_body(self):
 
         body_text = self.driver.find_element(
-            By.TAG_NAME,
-            "body"
+            *self.body
         ).text
 
         for line in body_text.splitlines():
@@ -489,8 +397,7 @@ class PropertyDetailsPage:
     def is_login_popup_displayed(self):
 
         body_text = self.driver.find_element(
-            By.TAG_NAME,
-            "body"
+            *self.body
         ).text.lower()
 
         keywords = [

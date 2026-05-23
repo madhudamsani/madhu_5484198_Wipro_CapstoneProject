@@ -17,10 +17,10 @@ and Allure reporting.
 
 ## Commands
 
-Run all scenarios except the manual OTP flow:
+Run all scenarios except the end-to-end OTP flow:
 
 ```powershell
-.\.venv\Scripts\python.exe -m behave --tags "~@manual_otp"
+.\.venv\Scripts\python.exe -m behave --tags "~@end_to_end"
 ```
 
 Run all scenarios:
@@ -38,7 +38,7 @@ Generate Allure results:
 Show plain console output for debugging:
 
 ```powershell
-.\.venv\Scripts\python.exe -m behave --tags "~@manual_otp" -f plain
+.\.venv\Scripts\python.exe -m behave --tags "~@end_to_end" -f plain
 ```
 
 Generate the HTML Allure report after a run:

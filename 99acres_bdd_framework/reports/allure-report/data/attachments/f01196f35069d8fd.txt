@@ -1,0 +1,8 @@
+2026-05-23 13:09:57 | INFO | environment.py:128 | Starting Scenario: Positive2: Verify 2 BHK filter
+2026-05-23 13:10:00 | INFO | environment.py:200 | Navigated To 99acres Website
+2026-05-23 13:10:00 | INFO | end_to_end_steps.py:94 | Clicking Rent Tab
+2026-05-23 13:10:00 | INFO | end_to_end_steps.py:97 | Entering Location: Rent in Hyderabad
+2026-05-23 13:10:02 | INFO | end_to_end_steps.py:101 | Clicking Search Button
+2026-05-23 13:10:18 | INFO | home_page.py:232 | Screenshot Attached To Allure Report: 2_bhk_filter_verified
+2026-05-23 13:10:18 | INFO | environment.py:246 | Ending Scenario: Positive2: Verify 2 BHK filter
+2026-05-23 13:10:21 | INFO | environment.py:275 | Browser Closed Successfully

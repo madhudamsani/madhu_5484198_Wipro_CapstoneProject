@@ -1,0 +1,7 @@
+2026-05-23 13:09:37 | INFO | environment.py:128 | Starting Scenario: Negative2:Verify empty location validation
+2026-05-23 13:09:40 | INFO | environment.py:200 | Navigated To 99acres Website
+2026-05-23 13:09:40 | INFO | positive_negative_steps.py:72 | Initial URL: https://www.99acres.com/
+2026-05-23 13:09:40 | INFO | positive_negative_steps.py:73 | Current URL: https://www.99acres.com/
+2026-05-23 13:09:41 | INFO | home_page.py:232 | Screenshot Attached To Allure Report: empty_location_validation
+2026-05-23 13:09:41 | INFO | environment.py:246 | Ending Scenario: Negative2:Verify empty location validation
+2026-05-23 13:09:43 | INFO | environment.py:275 | Browser Closed Successfully

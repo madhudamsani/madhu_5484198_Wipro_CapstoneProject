@@ -1,0 +1,24 @@
+2026-05-23 13:05:21 | INFO | environment.py:128 | Starting Scenario: Complete end-to-end property search and owner contact flow
+2026-05-23 13:05:24 | INFO | environment.py:200 | Navigated To 99acres Website
+2026-05-23 13:05:24 | INFO | end_to_end_steps.py:121 | Hovering Profile Icon
+2026-05-23 13:05:24 | INFO | end_to_end_steps.py:124 | Clicking Login/Register
+2026-05-23 13:05:25 | INFO | home_page.py:232 | Screenshot Attached To Allure Report: login_popup
+2026-05-23 13:05:25 | INFO | end_to_end_steps.py:128 | Entering Mobile Number
+2026-05-23 13:05:25 | INFO | end_to_end_steps.py:131 | Clicking Continue
+2026-05-23 13:05:26 | INFO | end_to_end_steps.py:137 | Waiting 20 seconds for manual OTP entry
+2026-05-23 13:05:46 | INFO | home_page.py:232 | Screenshot Attached To Allure Report: manual_otp_entered
+2026-05-23 13:06:06 | INFO | end_to_end_steps.py:94 | Clicking Rent Tab
+2026-05-23 13:06:06 | INFO | end_to_end_steps.py:97 | Entering Location: Rent in Hyderabad
+2026-05-23 13:06:07 | INFO | home_page.py:232 | Screenshot Attached To Allure Report: location_entered
+2026-05-23 13:06:07 | INFO | end_to_end_steps.py:101 | Clicking Search Button
+2026-05-23 13:06:10 | INFO | home_page.py:232 | Screenshot Attached To Allure Report: search_results_page
+2026-05-23 13:07:08 | INFO | home_page.py:232 | Screenshot Attached To Allure Report: all_filters_applied
+2026-05-23 13:07:22 | INFO | home_page.py:232 | Screenshot Attached To Allure Report: property_details_page
+2026-05-23 13:07:22 | INFO | end_to_end_steps.py:219 | Property Title: 2BHK 2Baths
+Flat/Apartment for Rent
+in mahalaxmi himes, turkayamjal, TurkaYamjal, Hyderabad
+2026-05-23 13:07:22 | INFO | end_to_end_steps.py:220 | Rent Amount: 6500
+2026-05-23 13:07:41 | INFO | home_page.py:232 | Screenshot Attached To Allure Report: shortlist_clicked
+2026-05-23 13:08:30 | INFO | home_page.py:232 | Screenshot Attached To Allure Report: owner_details
+2026-05-23 13:08:30 | INFO | environment.py:246 | Ending Scenario: Complete end-to-end property search and owner contact flow
+2026-05-23 13:08:32 | INFO | environment.py:275 | Browser Closed Successfully

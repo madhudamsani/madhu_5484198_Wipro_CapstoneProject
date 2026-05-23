@@ -1,5 +1,4 @@
 from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import re
 from selenium.common.exceptions import (
@@ -16,12 +15,13 @@ from selenium.webdriver.support import (
     expected_conditions as EC
 )
 
-from utilities.config_reader import (
+from config.config import (
     get_implicit_wait
 )
+from locators.filters_page_locators import FiltersPageLocators
 
 
-class FiltersPage:
+class FiltersPage(FiltersPageLocators):
 
     def __init__(self, driver):
 
@@ -31,103 +31,6 @@ class FiltersPage:
             driver,
             get_implicit_wait()
         )
-
-    # =====================================================
-    # POPUP LOCATORS
-    # =====================================================
-
-    ok_understood_button = (
-        By.XPATH,
-        "//*[self::button or self::div or self::span]"
-        "[translate(normalize-space(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')="
-        "'ok, understood']"
-    )
-
-    cookie_ok_button = (
-        By.XPATH,
-        "//*["
-        "(self::button or self::div or self::span)"
-        " and (normalize-space()='Okay' "
-        "or normalize-space()='OK')"
-        "]"
-    )
-
-    # =====================================================
-    # FILTER LOCATORS
-    # =====================================================
-
-    # 2 BHK
-    bhk_2_filter = (
-        By.XPATH,
-        "//*[not(ancestor::*[@data-label='SEARCH']) "
-        "and normalize-space()='2 BHK']"
-    )
-
-    #2bhk title
-    bhk2_title = (By.XPATH, "//*[@id='AI_LISTING']/div[2]/div[1]/div/div[2]/a/h2/span")
-
-    # Flat / Apartment
-    flat_apartment_filter = (
-        By.XPATH,
-        "//*[not(ancestor::*[@data-label='SEARCH']) "
-        "and (normalize-space()='Residential Apartment' "
-        "or normalize-space()='+ Residential Apartment' "
-        "or normalize-space()='Flat/Apartment' "
-        "or normalize-space()='+ Flat/Apartment')]"
-    )
-
-    # Owner
-    owner_filter = (
-        By.XPATH,
-        "//*[not(ancestor::*[@data-label='SEARCH']) "
-        "and normalize-space()='Owner']"
-    )
-
-    # Single Men
-    single_men_filter = (
-        By.XPATH,
-        "//*[not(ancestor::*[@data-label='SEARCH']) "
-        "and (normalize-space()='Single Men' "
-        "or normalize-space()='+ Single Men')]"
-    )
-
-    # Sort Dropdown
-    sort_by_dropdown = (
-        By.ID,
-        "sortby"
-    )
-
-    # Price Low To High
-    price_low_to_high_option = (
-        By.XPATH,
-        "//*[self::div or self::span or self::li]"
-        "[string-length(normalize-space()) <= 40 "
-        "and (contains(normalize-space(),'Price (Low to High)') "
-        "or contains(normalize-space(),'Price Low to High') "
-        "or contains(normalize-space(),'Price: Low to High') "
-        "or contains(normalize-space(),'Low to High'))]"
-    )
-
-    # =====================================================
-    # PROPERTY RESULTS
-    # =====================================================
-
-    property_cards = (
-        By.CSS_SELECTOR,
-        "div[data-label='SEARCH'], "
-        "section[data-cnstrc-item-name='propertyTuple'], "
-        "div[data-cnstrc-item-name='propertyTuple']"
-    )
-
-    property_link_inside_card = (
-        By.CSS_SELECTOR,
-        "a[href]"
-    )
-
-    #filtered properties count
-    filtered_results_count = (
-        By.XPATH, "//*[@id='app']/div/div/div[4]/div[3]/div[1]/div[1]/span"
-    )
 
     # =====================================================
     # COMMON METHODS
@@ -370,10 +273,13 @@ class FiltersPage:
     def click_filter_until_applied(
             self,
             locator,
-            filter_name,
+            filter_names,
             retries=3,
             max_scrolls=5
     ):
+
+        if isinstance(filter_names, str):
+            filter_names = [filter_names]
 
         for _ in range(retries):
 
@@ -398,14 +304,15 @@ class FiltersPage:
                 previous_count
             )
 
-            if self.is_applied_filter_present(
-                    filter_name
+            if any(
+                    self.is_applied_filter_present(name)
+                    for name in filter_names
             ):
                 return True
 
         raise AssertionError(
             f"Failed to apply filter: "
-            f"{filter_name}"
+            f"{' / '.join(filter_names)}"
         )
 
     # =====================================================
@@ -418,8 +325,7 @@ class FiltersPage:
     ):
 
         body_text = self.driver.find_element(
-            By.TAG_NAME,
-            "body"
+            *self.body
         ).text
 
         if "Applied Filters" in body_text:
@@ -450,18 +356,20 @@ class FiltersPage:
 
     def verify_required_filters_applied(self):
 
-        required_filters = [
-            "2 BHK",
-            "Flat/Apartment",
-            "Owner",
-            "Single Men"
-        ]
+        flat_apartment_present = any(
+            self.is_applied_filter_present(filter_name)
+            for filter_name in [
+                "Flat/Apartment",
+                "Residential Apartment",
+                "Apartment"
+            ]
+        )
 
-        return all(
-            self.is_applied_filter_present(
-                filter_name
-            )
-            for filter_name in required_filters
+        return (
+                self.is_applied_filter_present("2 BHK")
+                and flat_apartment_present
+                and self.is_applied_filter_present("Owner")
+                and self.is_applied_filter_present("Single Men")
         )
 
     # =====================================================
@@ -480,7 +388,11 @@ class FiltersPage:
 
         return self.click_filter_until_applied(
             self.flat_apartment_filter,
-            "Flat/Apartment",
+            [
+                "Flat/Apartment",
+                "Residential Apartment",
+                "Apartment"
+            ],
             max_scrolls=4
         )
 
@@ -672,8 +584,7 @@ class FiltersPage:
         )
 
         page_text = self.driver.find_element(
-            By.TAG_NAME,
-            "body"
+            *self.body
         ).text
 
         return (

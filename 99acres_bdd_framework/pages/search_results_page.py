@@ -1,7 +1,5 @@
 import re
 
-from selenium.webdriver.common.by import By
-
 from selenium.common.exceptions import (
     TimeoutException,
     StaleElementReferenceException
@@ -18,9 +16,12 @@ from selenium.webdriver.support import (
 from config.config import (
     get_implicit_wait
 )
+from locators.search_results_page_locators import (
+    SearchResultsPageLocators
+)
 
 
-class SearchResultsPage:
+class SearchResultsPage(SearchResultsPageLocators):
     """
     Page Object Model for 99acres Search Results Page.
 
@@ -39,34 +40,6 @@ class SearchResultsPage:
             driver,
             get_implicit_wait()
         )
-
-    # =====================================================
-    # LOCATORS
-    # =====================================================
-
-    # Results Heading
-    results_heading = (
-        By.TAG_NAME,
-        "h1"
-    )
-
-    # Property Cards
-    property_cards = (
-        By.CSS_SELECTOR,
-        "div[data-label='SEARCH']"
-    )
-
-    # Result Count Text
-    result_count_text = (
-        By.XPATH,
-        "//*[contains("
-        "translate("
-        "normalize-space(),"
-        "'ABCDEFGHIJKLMNOPQRSTUVWXYZ',"
-        "'abcdefghijklmnopqrstuvwxyz'"
-        "),"
-        "'results')]"
-    )
 
     # =====================================================
     # PAGE VALIDATION

@@ -1,15 +1,15 @@
-from selenium.webdriver.common.by import By
 from selenium.common.exceptions import StaleElementReferenceException, TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from config.config import get_implicit_wait
+from locators.home_page_locators import HomePageLocators
 
 import allure
 
 from utilities.logger import LogGen
 logger = LogGen.loggen()
 
-class HomePage:
+class HomePage(HomePageLocators):
     """
     Page Object Model for 99acres Home Page.
 
@@ -28,54 +28,6 @@ class HomePage:
             driver,
             get_implicit_wait()
         )
-
-    # =====================================================
-    # LOCATORS
-    # =====================================================
-
-    # Buy Tab
-    buy_tab = (
-        By.ID,
-        "inPageSearchForm_0"
-    )
-
-    # Rent Tab
-    rent_tab = (
-        By.ID,
-        "inPageSearchForm_1"
-    )
-
-    # Rent Tab Alternative Locator
-    rent_tab_by_text = (
-        By.XPATH,
-        "//*[not(ancestor::*[@data-label='SEARCH']) "
-        "and normalize-space()='Rent']"
-    )
-
-    # Search Input
-    search_box = (
-        By.ID,
-        "keyword2"
-    )
-
-    # Search Button
-    search_button = (
-        By.ID,
-        "searchform_search_btn"
-    )
-
-    # Search Button Alternative Locator
-    search_button_by_text = (
-        By.XPATH,
-        "//button[normalize-space()='Search']"
-    )
-
-    #searchbar with location
-    displayed_location = (
-        By.XPATH,
-        "//*[@id='searchTabContainer']/div[1]/span[2]"
-
-    )
 
     # =====================================================
     # COMMON METHODS

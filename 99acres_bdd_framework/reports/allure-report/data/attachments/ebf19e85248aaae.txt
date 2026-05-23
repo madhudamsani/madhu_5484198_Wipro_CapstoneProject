@@ -1,0 +1,8 @@
+2026-05-23 13:08:32 | INFO | environment.py:128 | Starting Scenario: Negative 1: Verify shortlist requires login
+2026-05-23 13:08:35 | INFO | environment.py:200 | Navigated To 99acres Website
+2026-05-23 13:08:35 | INFO | end_to_end_steps.py:94 | Clicking Rent Tab
+2026-05-23 13:08:35 | INFO | end_to_end_steps.py:97 | Entering Location: Rent in Hyderabad
+2026-05-23 13:08:37 | INFO | end_to_end_steps.py:101 | Clicking Search Button
+2026-05-23 13:09:34 | INFO | home_page.py:232 | Screenshot Attached To Allure Report: shortlist_login_popup
+2026-05-23 13:09:34 | INFO | environment.py:246 | Ending Scenario: Negative 1: Verify shortlist requires login
+2026-05-23 13:09:37 | INFO | environment.py:275 | Browser Closed Successfully

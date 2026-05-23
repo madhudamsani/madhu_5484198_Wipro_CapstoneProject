@@ -1,4 +1,4 @@
-@manual_otp
+@end_to_end
 Feature: 99acres end-to-end rental property flow
   As a logged-in 99acres user
   I want to search, filter, shortlist, and view owner contact details

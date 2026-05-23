@@ -3,7 +3,6 @@ from selenium.common.exceptions import (
     WebDriverException
 )
 
-from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -11,9 +10,10 @@ from selenium.webdriver.support import expected_conditions as EC
 from config.config import (
     get_implicit_wait
 )
+from locators.login_page_locators import LoginPageLocators
 
 
-class LoginPage:
+class LoginPage(LoginPageLocators):
     """
     Page Object Model for 99acres Login Page.
 
@@ -34,50 +34,6 @@ class LoginPage:
         )
 
         self.actions = ActionChains(driver)
-
-    # =====================================================
-    # LOCATORS
-    # =====================================================
-
-    # Profile Icon
-    profile_icon = (
-        By.XPATH,
-        "//*[@id='app']/div/div[1]/div[2]/div[2]/div[5]"
-    )
-
-    # Login/Register Button
-    login_register_button = (
-        By.XPATH,
-        "//div[contains(text(),'LOGIN / REGISTER')]"
-    )
-
-    # Mobile Number Input
-    mobile_input = (
-        By.CSS_SELECTOR,
-        "#app > div > div.component__dialogueBox > "
-        "div.component__body > "
-        "div.loginRegisterStyle__mobwebLoginGui > "
-        "div > div > form > div.inputWrap__inputWrap > "
-        "div > div > input"
-    )
-
-    # Continue Button
-    continue_button = (
-        By.XPATH,
-        "//button[normalize-space()='Continue']"
-    )
-
-    # Verify & Continue Button
-    verify_continue_button = (
-        By.XPATH,
-        "//button[contains(.,'Verify')]"
-    )
-
-    # Overlay Popup
-    login_overlay = (
-        By.CSS_SELECTOR,
-        ".component__overlayBg"
-    )
 
     # =====================================================
     # COMMON METHODS

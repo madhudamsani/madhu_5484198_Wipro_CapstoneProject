@@ -60,6 +60,10 @@ LOGS_DIR = (
     PROJECT_ROOT / "logs"
 )
 
+LOG_FILE = (
+    LOGS_DIR / "automation.log"
+)
+
 # =====================================================
 # BEFORE ALL
 # =====================================================
@@ -116,6 +120,10 @@ def before_scenario(
         context,
         scenario
 ):
+
+    context.scenario_log_start_position = (
+        get_log_file_size()
+    )
 
     logger.info(
         f"Starting Scenario: "
@@ -275,6 +283,11 @@ def after_scenario(
             f"{error}"
         )
 
+    attach_scenario_logs(
+        context,
+        scenario.name
+    )
+
 # =====================================================
 # COMMON FAILURE SCREENSHOT METHOD
 # =====================================================
@@ -329,5 +342,83 @@ def attach_failure_screenshot(
 
         logger.error(
             f"Unable To Save Screenshot: "
+            f"{error}"
+        )
+
+
+# =====================================================
+# COMMON ALLURE LOG ATTACHMENT METHODS
+# =====================================================
+
+def get_log_file_size():
+
+    if not LOG_FILE.exists():
+
+        return 0
+
+    return LOG_FILE.stat().st_size
+
+
+def flush_logger_handlers():
+
+    for handler in logger.handlers:
+
+        handler.flush()
+
+
+def attach_scenario_logs(
+        context,
+        scenario_name
+):
+
+    flush_logger_handlers()
+
+    if not LOG_FILE.exists():
+
+        return
+
+    start_position = getattr(
+        context,
+        "scenario_log_start_position",
+        0
+    )
+
+    try:
+
+        with LOG_FILE.open(
+                "r",
+                encoding="utf-8",
+                errors="replace"
+        ) as log_file:
+
+            log_file.seek(
+                start_position
+            )
+
+            scenario_logs = (
+                log_file.read()
+                .strip()
+            )
+
+        if not scenario_logs:
+
+            return
+
+        attachment_name = (
+            f"{scenario_name}_logs"
+            .replace(" ", "_")
+            .replace("/", "_")
+        )
+
+        allure.attach(
+            scenario_logs,
+            name=attachment_name,
+            attachment_type=allure.attachment_type.TEXT
+        )
+
+    except OSError as error:
+
+        logger.error(
+            f"Unable To Attach Scenario Logs: "
             f"{error}"
         )
